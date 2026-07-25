@@ -1,328 +1,162 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velusa | Mobile Luxury Matcha & Pastries</title>
-<!-- Velusa Custom CSS + JS -->
-    <link rel="stylesheet" href="velusa.css">
-    <script src="velusa.js" defer></script>
-    <style>
-        /* BRAND COLOR PALETTE & STYLES */
-        :root {
-            --rose-gold: #B76E79;
-            --rose-gold-light: #E8C5C8;
-            --off-white: #FAF9F6;
-            --cream: #F5EFEB;
-            --blush: #F4E3E3;
-            --charcoal: #2C2C2C;
-            --font-main: 'Helvetica Neue', Arial, sans-serif;
-            --font-serif: 'Playfair Display', Georgia, serif;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: var(--off-white);
-            color: var(--charcoal);
-            font-family: var(--font-main);
-            line-height: 1.6;
-        }
-
-        /* NAVIGATION */
-        header {
-            background-color: var(--off-white);
-            border-bottom: 1px solid var(--rose-gold-light);
-            padding: 1.5rem 5%;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: var(--font-serif);
-            font-size: 1.8rem;
-            letter-spacing: 3px;
-            color: var(--rose-gold);
-            text-transform: uppercase;
-        }
-
-        nav a {
-            color: var(--charcoal);
-            text-decoration: none;
-            margin-left: 2rem;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: var(--rose-gold);
-        }
-
-        /* HERO SECTION */
-        .hero {
-            background-color: var(--cream);
-            padding: 6rem 5%;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-family: var(--font-serif);
-            font-size: 3rem;
-            color: var(--rose-gold);
-            margin-bottom: 1rem;
-            font-weight: 300;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            color: var(--charcoal);
-        }
-
-        .btn {
-            background-color: var(--rose-gold);
-            color: #fff;
-            padding: 0.8rem 2rem;
-            border: none;
-            border-radius: 2px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: background 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #a05c66;
-        }
-
-        /* SECTIONS GENERAL */
-        section {
-            padding: 5rem 5%;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-family: var(--font-serif);
-            text-align: center;
-            font-size: 2rem;
-            color: var(--rose-gold);
-            margin-bottom: 3rem;
-            letter-spacing: 1px;
-        }
-
-        /* LOCATION CALENDAR */
-        .schedule-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .schedule-card {
-            background: #fff;
-            padding: 1.5rem;
-            border: 1px solid var(--rose-gold-light);
-            border-radius: 4px;
-        }
-
-        .schedule-card .date {
-            font-weight: bold;
-            color: var(--rose-gold);
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            margin-bottom: 0.5rem;
-        }
-
-        /* PRIVATE EVENTS & FORM */
-        .events-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            background: var(--blush);
-            padding: 3rem;
-            border-radius: 4px;
-        }
-
-        @media (max-width: 768px) {
-            .events-container { grid-template-columns: 1fr; }
-        }
-
-        .form-group {
-            margin-bottom: 1.2rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.4rem;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .form-group input, .form-group textarea, .form-group select {
-            width: 100%;
-            padding: 0.7rem;
-            border: 1px solid var(--rose-gold-light);
-            background: var(--off-white);
-            font-family: inherit;
-        }
-
-        /* COMMUNITY BLOG */
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .blog-card {
-            background: #fff;
-            border: 1px solid var(--rose-gold-light);
-            padding: 1.5rem;
-        }
-
-        .blog-card h3 {
-            font-family: var(--font-serif);
-            color: var(--rose-gold);
-            margin-bottom: 0.5rem;
-        }
-
-        .blog-card .meta {
-            font-size: 0.8rem;
-            color: #777;
-            margin-bottom: 1rem;
-        }
-
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background-color: var(--cream);
-            border-top: 1px solid var(--rose-gold-light);
-            font-size: 0.85rem;
-            color: var(--charcoal);
-        }
-    </style>
+    <title>Velusa</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
 
-    <!-- NAVIGATION -->
-    <header>
-        <div class="logo">Velusa</div>
+<body>
+    <header class="nav">
+        <img src="assets/logo.png" class="logo" alt="Velusa Logo">
         <nav>
-            <a href="#schedule">Find Us</a>
-            <a href="#events">Bookings</a>
-            <a href="#blog">Journal</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <!-- HERO SECTION -->
-    <div class="hero">
-        <h1>Refined Taste, Delivered.</h1>
-        <p>A luxury mobile experience serving premium ceremonial matcha handcrafted alongside delicate Miffy-inspired pastries.</p>
-        <a href="#events" class="btn">Reserve Velusa For Your Event</a>
-    </div>
+    <section class="hero">
+        <h1>Velusa</h1>
+        <p>Luxury Mobile Matcha & Pastry House</p>
+    </section>
 
-    <!-- LOCATION CALENDAR / SCHEDULE -->
-    <section id="schedule">
-        <h2 class="section-title">Mobile Cart Schedule</h2>
-        <div class="schedule-grid">
-            <div class="schedule-card">
-                <div class="date">Saturday, Oct 10 • 9:00 AM - 1:00 PM</div>
-                <h3>Downtown Boutique Pop-Up</h3>
-                <p>Corner of Main St. & 4th</p>
+    <section id="menu" class="menu">
+        <h2>Signature Drinks</h2>
+        <div class="menu-grid">
+            <div class="item">
+                <img src="assets/drinks/matcha.jpg">
+                <h3>Velusa Matcha</h3>
+                <p>Cool-cream base, emerald swirl.</p>
             </div>
-            <div class="schedule-card">
-                <div class="date">Sunday, Oct 11 • 10:00 AM - 2:00 PM</div>
-                <h3>The Local Market</h3>
-                <p>Town Square Pavilion</p>
+
+            <div class="item">
+                <img src="assets/drinks/rose.jpg">
+                <h3>Rose-Gold Milk Tea</h3>
+                <p>Blush pink finish, matte foam.</p>
             </div>
-            <div class="schedule-card">
-                <div class="date">Friday, Oct 16 • 2:00 PM - 6:00 PM</div>
-                <h3>Private Terrace Service</h3>
-                <p>Reserved Location</p>
+
+            <div class="item">
+                <img src="assets/drinks/blue.jpg">
+                <h3>Navy Cloud Latte</h3>
+                <p>Grey-blue crema, soft vanilla cloud.</p>
+            </div>
+        </div>
+
+        <h2>Miffy Pastries</h2>
+        <div class="menu-grid">
+            <div class="item">
+                <img src="assets/pastries/miffy-cream.jpg">
+                <h3>Cream Miffy</h3>
+                <p>Uniform-color top & bottom.</p>
+            </div>
+
+            <div class="item">
+                <img src="assets/pastries/miffy-choco.jpg">
+                <h3>Chocolate Miffy</h3>
+                <p>Matte cocoa shell, filled center.</p>
             </div>
         </div>
     </section>
 
-    <hr style="border: 0; border-top: 1px solid var(--rose-gold-light); width: 80%; margin: 0 auto;">
-
-    <!-- PRIVATE EVENTS & RESERVATION FORM -->
-    <section id="events">
-        <h2 class="section-title">Private Event Reservations</h2>
-        <div class="events-container">
-            <div>
-                <h3>Elevate Your Gathering</h3>
-                <p style="margin-top: 1rem;">Bring Velusa's aesthetic cart service directly to your celebration, wedding, or corporate event.</p>
-                <p style="margin-top: 1rem;">We handle full bar setup, custom menus, and dedicated barista service tailored to your color theme and brand vision.</p>
-            </div>
-            
-            <form>
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="event-type">Event Type</label>
-                    <select id="event-type">
-                        <option>Private Party</option>
-                        <option>Wedding / Shower</option>
-                        <option>Corporate Event</option>
-                        <option>Other</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="date">Requested Date</label>
-                    <input type="date" id="date">
-                </div>
-                <div class="form-group">
-                    <label for="message">Event Details & Guest Count</label>
-                    <textarea id="message" rows="4"></textarea>
-                </div>
-                <button type="submit" class="btn" style="width: 100%;">Submit Inquiry</button>
-            </form>
-        </div>
+    <section id="about" class="about">
+        <h2>About Velusa</h2>
+        <p>Velusa blends luxury aesthetics with handcrafted matcha and character pastries. 
+           Designed in a cool-cream palette with blush and rose-gold accents, our mobile café 
+           brings a soft matte experience to every city we visit.</p>
     </section>
 
-    <!-- COMMUNITY JOURNAL / BLOG -->
-    <section id="blog">
-        <h2 class="section-title">The Velusa Journal</h2>
-        <div class="blog-grid">
-            <div class="blog-card">
-                <h3>Behind the Brand: Crafting Our Vision</h3>
-                <div class="meta">Posted on September 15</div>
-                <p>A look into how we curated our signature rose gold cart and selected our ceremonial matcha blends...</p>
-            </div>
-            <div class="blog-card">
-                <h3>Introducing Our Custom Pastry Line</h3>
-                <div class="meta">Posted on August 28</div>
-                <p>Pairing specialized matcha notes with minimalist, elegant Miffy pastry designs for your next pop-up visit...</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2026 Velusa Mobile Luxury Matcha. All rights reserved.</p>
+    <footer id="contact" class="footer">
+        <p>© 2026 Velusa — Luxury Mobile Café</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
-</html>
-    
+</html>⭐ styles.csscssCopy:root {
+    --cream: #f5f3ee;
+    --blush: #f7dce5;
+    --rose-gold: #cfa59a;
+    --navy: #1c2a3a;
+    --grey-blue: #6c7a89;
+    --pastel-purple: #c9c3e6;
+    --emerald: #2e6f5e;
+    --turquoise: #7ddad1;
+    --matte-shadow: rgba(0,0,0,0.08);
+}
 
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--navy);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: var(--cream);
+    box-shadow: 0 2px 8px var(--matte-shadow);
+}
+
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--grey-blue);
+    font-weight: 500;
+}
+
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: linear-gradient(to bottom, var(--blush), var(--cream));
+}
+
+.hero h1 {
+    font-size: 64px;
+    color: var(--navy);
+}
+
+.hero p {
+    font-size: 20px;
+    color: var(--grey-blue);
+}
+
+.menu {
+    padding: 60px 40px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.item {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px var(--matte-shadow);
+    padding: 20px;
+    text-align: center;
+}
+
+.item img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.about {
+    padding: 60px 40px;
+    background: var(--pastel-purple);
+    color: var(--navy);
+    border-top: 4px solid var(--rose-gold);
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--navy);
+    color: var(--cream);
+}
