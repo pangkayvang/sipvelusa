@@ -301,24 +301,6 @@
       section[class*="contact-hero"] h1,
       section[class*="contact-hero"] p { color: #FFFAFB !important; }
 
-      /* ── NEWSLETTER STRIP → blush instead of sage ── */
-      section[class*="newsletter"], .newsletter-strip {
-        background: #EFD0DC !important;
-      }
-      section[class*="newsletter"] h2,
-      section[class*="newsletter"] h3 { color: #4A3C37 !important; }
-      section[class*="newsletter"] p { color: #9B6B7A !important; }
-      section[class*="newsletter"] button {
-        background: #C4909E !important;
-        color: #FFFAFB !important;
-      }
-      section[class*="newsletter"] button:hover { background: #9B6B7A !important; }
-      section[class*="newsletter"] input {
-        background: rgba(255,253,252,0.35) !important;
-        border-color: rgba(255,253,252,0.5) !important;
-        color: #4A3C37 !important;
-      }
-
       /* ── FOOTER → blush/cream instead of dark espresso ── */
       footer, .site-footer {
         background: #F7E0E8 !important;
@@ -1316,18 +1298,6 @@
           </div>
         </div>
       </section>
-
-      <!-- Newsletter Strip -->
-      <section data-id="703" class="py-12 bg-sage">
-        <div data-id="704" class="max-w-3xl mx-auto px-5 md:px-8 text-center">
-          <h3 data-id="705" class="font-cinzel text-offwhite text-2xl md:text-3xl mb-2">Join the Velusa Circle</h3>
-          <p data-id="706" class="font-lato text-cream text-sm mb-6">Seasonal menus, exclusive events, and matcha rituals — delivered gently to your inbox.</p>
-          <form data-id="707" id="newsletter-form-x4y6" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            <input data-id="708" type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-l font-lato text-sm text-offwhite" style="background: rgba(255,253,252,0.2); border: 1px solid rgba(255,253,252,0.4);" id="newsletter-email-z8a0">
-            <button data-id="709" type="submit" id="newsletter-submit-b2c4" class="font-poppins uppercase tracking-[2px] text-offwhite bg-espresso px-6 py-3 rounded-r text-xs hover:bg-rose-dark transition-colors">Subscribe</button>
-          </form>
-        </div>
-      </section>
     </div>
 
     </main>
@@ -1423,7 +1393,6 @@
       if (typeof lucide !== "undefined" && typeof lucide.createIcons === "function") {
         lucide.createIcons();
       }
-
       // ===== PAGE NAVIGATION =====
       const pages = ['home', 'menu', 'locations', 'about', 'contact'];
       const navLinks = document.querySelectorAll('.nav-link[data-page]');
@@ -1431,30 +1400,30 @@
       const footerNavLinks = document.querySelectorAll('.footer-nav-link[data-page]');
       const storyLink = document.querySelector('.story-link-j4r2');
 
-      function switchPage(pageName) {
-        pages.forEach(p => {
-          const el = document.getElementById('page-' + p);
-          if (el) {
+     function switchPage(pageName) {
+    pages.forEach(p => {
+        const el = document.getElementById('page-' + p);
+        if (el) {
             el.classList.remove('active');
-            // Force reflow for transition
             void el.offsetHeight;
-          }
-        });
-        const target = document.getElementById('page-' + pageName);
-        if (target) {
-          target.classList.add('active');
-          // Re-trigger reveals on new page
-          setTimeout(() => initReveal(), 100);
         }
-        // Update nav active state
-        navLinks.forEach(l => {
-          l.classList.toggle('active', l.dataset.page === pageName);
-        });
-        // Close mobile menu
-        document.getElementById('mobile-menu-p8k3').classList.add('hidden');
-        // Scroll to top
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
+    });
+
+    const target = document.getElementById('page-' + pageName);
+    if (target) {
+        target.classList.add('active');
+        setTimeout(() => initReveal(), 100);
+    }
+
+    navLinks.forEach(l => {
+        l.classList.toggle('active', l.dataset.page === pageName);
+    });
+
+    document.getElementById('mobile-menu-p8k3').classList.add('hidden');
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}   <!-- ⭐ THIS is the correct closing brace -->
+
 
       navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -1525,23 +1494,12 @@
       });
 
       // ===== CONTACT FORM =====
-      document.getElementById('contact-form-k5l9').addEventListener('submit', function(e) {
+      document.getElementById('contact-form-k5l9')?.addEventListener('submit', function(e) {
         e.preventDefault();
-        document.getElementById('contact-overlay-m7j2').classList.add('show');
+        document.getElementById('contact-overlay-m7j2')?.classList.add('show');
       });
       document.getElementById('close-contact-overlay-b9p1').addEventListener('click', function() {
         document.getElementById('contact-overlay-m7j2').classList.remove('show');
-      });
-
-      // ===== NEWSLETTER =====
-      document.getElementById('newsletter-form-x4y6').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const emailInput = document.getElementById('newsletter-email-z8a0');
-        if (emailInput.value) {
-          emailInput.value = '';
-          emailInput.placeholder = 'Thank you! You\'re in the circle ✨';
-          setTimeout(() => { emailInput.placeholder = 'Enter your email'; }, 3000);
-        }
       });
 
       // ===== CATEGORY PILLS =====
@@ -1573,7 +1531,7 @@
     </script>
 
   <script>
-  (function() {
+  
     function retheme() {
       // Swap all large section bg-espresso to blush/cream
       var bgEspresso = document.querySelectorAll(
@@ -1611,7 +1569,7 @@
           el.style.border = 'none';
         }
       });
-<!-- Netlify redeploy trigger -->
+//<!-- Netlify redeploy trigger -->
       // Hero primary button
       document.querySelectorAll('.pulse-cta, button[class*="pulse"]').forEach(function(el) {
         el.style.background = '#C4909E';
@@ -1626,49 +1584,41 @@
         f.querySelectorAll('h3,h4').forEach(function(h) { h.style.color = '#9B6B7A'; });
         f.querySelectorAll('a,p,span,li').forEach(function(t) { t.style.color = '#9A8087'; });
       });
-
-
-        
+ 
       // Values / About dark section
-      document.querySelectorAll('section').forEach(function(s) {
-        var bg = window.getComputedStyle(s).backgroundColor;
-        // rgb(74, 60, 55) = #4A3C37
-        if (bg === 'rgb(74, 60, 55)') {
-          s.style.background = '#FAF5F8';
-          s.querySelectorAll('h1,h2,h3,h4').forEach(function(h) { h.style.color = '#4A3C37'; });
-          s.querySelectorAll('p,span,li').forEach(function(t) { t.style.color = '#9A8087'; });
-          s.querySelectorAll('[class*="icon"], [class*="circle"]').forEach(function(ic) {
-            ic.style.background = 'linear-gradient(135deg,#F7E0E8,#C4909E)';
-          });
-        }
-        // rgb(166, 174, 138) = #A6AE8A (sage newsletter)
-        if (bg === 'rgb(166, 174, 138)') {
-          s.style.background = '#EFD0DC';
-          s.querySelectorAll('h2,h3').forEach(function(h) { h.style.color = '#4A3C37'; });
-          s.querySelectorAll('p').forEach(function(p) { p.style.color = '#9B6B7A'; });
-          s.querySelectorAll('button').forEach(function(b) {
-            b.style.background = '#C4909E';
-            b.style.color = '#FFFAFB';
-          });
-        }
-      });
-    }
 
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', retheme);
-    } else {
-      retheme();
-    }
+document.querySelectorAll('section').forEach(function(s) {
+    var bg = window.getComputedStyle(s).backgroundColor;
 
-    // Also re-run on page switches (navigation)
-    document.addEventListener('click', function(e) {
-      setTimeout(retheme, 100);
-    });
-  })();
-  </script>
+    if (bg === 'rgb(74, 60, 55)') {
+        s.style.background = '#FAF5F8';
+        s.querySelectorAll('h1,h2,h3,h4').forEach(function(h) {
+            h.style.color = '#4A3C37';
+        });
+        s.querySelectorAll('p,span,li').forEach(function(t) {
+            t.style.color = '#9A8087';
+        });
+        s.querySelectorAll('[class*="icon"], [class*="circle"]').forEach(function(ic) {
+            ic.style.background = 'linear-gradient(135deg,#7FE0E8,#C4909E)';
+        });
+    }
+});
+    }
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', retheme);
+} else {
+    retheme();
+}
+
+document.addEventListener('click', function(e) {
+    setTimeout(retheme, 100);
+});
+</script>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
 <script>
-  // 1. Render the Lucide icons (makes the hamburger icon visible!)
-  lucide.createIcons();
+lucide.createIcons();
 
   // 2. Mobile Menu Toggle Logic
   const openBtn = document.getElementById('mobile-menu-btn-z3v7');
@@ -1680,19 +1630,17 @@
   openBtn?.addEventListener('click', () => {
     mobileMenu.classList.remove('hidden');
   });
-
   // Close Menu on 'X' click
   closeBtn?.addEventListener('click', () => {
     mobileMenu.classList.add('hidden');
   });
-
   // Close Menu when a link inside is clicked
   mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
       mobileMenu.classList.add('hidden');
     });
   });
-</script>
+  </script>
 <script>
   const form = document.getElementById('contact-form-k519');
   const formContainer = document.getElementById('form-container');
