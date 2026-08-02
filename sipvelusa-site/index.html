@@ -85,6 +85,7 @@
 
       /* Grain texture overlay */
       .grain::before { content: ''; position: absolute; inset: 0; opacity: 0.03; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"); pointer-events: none; z-index: 1; }
+      
 
       /* Diagonal stripes */
       .stripe-bg { background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(201,141,134,0.04) 10px, rgba(201,141,134,0.04) 11px); }
@@ -178,14 +179,38 @@
         box-shadow: 0 4px 18px rgba(201,141,134,0.25) !important;
       }
       button.pulse-cta:hover { background: #9B6B7A !important; }
+/* --- VALUE PROPS BAR -> Soft Rose-Gold + Pulse Effect --- */
+.marquee-strip, 
+div[class*="marquee-strip"], 
+section[class*="marquee"] {
+  background: #C4909E !important;
+  color: #FFFFFF !important;
+}
 
-      /* ── MARQUEE STRIP → soft rose-gold ── */
-      .marquee-strip, div[class*="marquee-strip"], section[class*="marquee"] {
-        background: #C4909E !important;
-      }
-      .marquee-track span, .marquee-track {
-        color: #FFFAFB !important;
-      }
+.marquee-strip span {
+  color: #FFFFFF !important;
+}
+
+/* Subtle Pulse Glow Animation */
+.pulse-banner {
+  animation: softPulse 3.5s ease-in-out infinite;
+}
+
+.spark {
+  opacity: 0.7;
+  display: inline-block;
+}
+
+@keyframes softPulse {
+  0%, 100% {
+    opacity: 0.75;
+    transform: scale(0.985);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
       /* ── FEATURED DRINKS: wide feature card → blush ── */
       .feature-card, .feature-drink-card,
@@ -565,32 +590,42 @@
         </div>
       </section>
 
-      <!-- MARQUEE STRIP -->
-      <div data-id="112" id="marquee-strip-n5b8" class="bg-espresso overflow-hidden" style="height:44px;">
-        <div data-id="113" class="marquee-track h-full items-center" style="display:flex;">
-          <span data-id="114" class="font-cormorant italic text-blush tracking-[2px] px-2" style="font-size:16px;">✦ Ceremonial Matcha ✦ Botanical Lattes ✦ Seasonal Drinks ✦ Organic Always ✦ Soft‑Luxury Experience ✦ Velusa Matcha Bar ✦&nbsp;&nbsp;</span>
-          <span data-id="115" class="font-cormorant italic text-blush tracking-[2px] px-2" style="font-size:16px;">✦ Ceremonial Matcha ✦ Botanical Lattes ✦ Seasonal Drinks ✦ Organic Always ✦ Soft‑Luxury Experience ✦ Velusa Matcha Bar ✦&nbsp;&nbsp;</span>
-        </div>
-      </div>
+<!-- VALUE PROPS BAR (Smooth Cross-Fade) -->
+<div data-id="112" id="value-props-bar" class="marquee-strip relative flex items-center justify-center w-full px-4 overflow-hidden" style="height:44px;">
+
+<!-- VALUE PROPS BAR (Responsive & Pulse) -->
+<div data-id="112" id="value-props-bar" class="marquee-strip flex items-center justify-center w-full px-2 sm:px-4 overflow-hidden" style="height:44px;">
+  <div class="pulse-banner flex items-center justify-center space-x-2 sm:space-x-4 md:space-x-5 text-center uppercase tracking-widest text-[10px] sm:text-xs md:text-sm font-medium whitespace-nowrap">
+    <span>Ceremonial Grade Matcha</span>
+    <span class="spark font-normal text-[6px]">✦</span>
+    <span>Soft Luxury Experience</span>
+    <span class="spark font-normal text-[6px] hidden sm:inline">✦</span>
+    <span class="hidden sm:inline">Mobile Pop-Up | KC Metro</span>
+  </div>
+</div>
+
+</div>
 
       <!-- FEATURED DRINKS SECTION -->
       <section data-id="116" id="drinks-section-y7c4" class="py-20 md:py-28 bg-cream">
         <div data-id="117" class="max-w-6xl mx-auto px-5 md:px-8">
           <div data-id="118" class="text-center mb-14 reveal">
-            <p data-id="119" class="font-poppins uppercase tracking-[3px] text-sage mb-3" style="font-size:11px;">Signature Creations</p>
-            <h2 data-id="120" class="font-cinzel text-espresso text-3xl md:text-[42px] mb-4">The Collection</h2>
-            <p data-id="121" class="font-lato text-taupe max-w-[480px] mx-auto" style="font-size:15px;">A curated selection of our most beloved creations, each a masterpiece of flavor and form.</p>
+            <p data-id="119" class="font-poppins uppercase tracking-[3px] text-sage mb-3" style="font-size:11px;">Velusa Signatures</p>
+            <h2 data-id="120" class="font-cinzel text-espresso text-3xl md:text-[42px] mb-4">The Jewel Collection</h2>
+            <p data-id="121" class="font-lato text-taupe max-w-[480px] mx-auto" style="font-size:15px;">Luxury matcha served from a traveling cart — ceremonial pours, dessert‑inspired layers, and soft pastry puffs</p>
           </div>
 
           <!-- Feature Card -->
           <div data-id="122" class="reveal mb-8 rounded-xl overflow-hidden" style="background: linear-gradient(135deg, #4A3C37, #9B6B7A); min-height:320px;">
             <div data-id="123" class="flex flex-col md:flex-row h-full">
               <div data-id="124" class="p-8 md:p-12 flex-1 flex flex-col justify-center">
-                <span data-id="125" class="font-poppins uppercase tracking-[2px] text-sage mb-3 block" style="font-size:10px;">Chef's Selection</span>
-                <h3 data-id="126" class="font-cinzel text-cream text-2xl md:text-4xl mb-4">Sakura Ceremonial Matcha</h3>
-                <p data-id="127" class="font-lato text-blush mb-4" style="font-size:14px;">Single-origin Uji ceremonial matcha, steamed oat milk, sakura blossom extract, served in hand-thrown ceramic.</p>
-                <p data-id="128" class="font-cinzel text-rose-mid text-2xl mb-6">$18</p>
-                <button data-id="129" class="self-start font-poppins uppercase tracking-[2px] border border-rose-mid text-rose-mid px-6 py-2.5 rounded hover:bg-rose-mid hover:text-white transition-colors" style="font-size:11px;">Add to Order</button>
+                <span data-id="125" class="font-poppins uppercase tracking-[2px] text-sage mb-3 block" style="font-size:10px;">Jewel Spotlight</span>
+                <h3 data-id="126" class="font-cinzel text-cream text-2xl md:text-4xl mb-4">Emerald — Classic Ceremonial Matcha</h3>
+                <p data-id="127" class="font-lato text-blush mb-4" style="font-size:14px;">Pure ceremonial matcha whisked to a velvety froth — simple, intentional, and quietly luxurious</p>
+                <p data-id="128" class="font-cinzel text-rose-mid text-2xl mb-6">$8.50</p>
+                <span class="font-poppins uppercase tracking-[2px] text-rose-mid text-xs opacity-70">
+  Available at Velusa Pop-Ups
+</span>
               </div>
               <div data-id="130" class="flex-1 flex items-center justify-center p-8 relative">
                 <!-- Tall glass CSS art -->
@@ -624,30 +659,123 @@
           <!-- Drink Cards Grid -->
           <div data-id="149" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            <!-- Card 1: Velusa Signature Latte -->
+            <!-- Card 1: Ruby Velvet -->
             <div data-id="150" class="drink-card bg-offwhite border border-blush rounded-lg overflow-hidden shadow-sm reveal">
-              <div data-id="151" class="h-[180px] flex items-center justify-center" style="background: linear-gradient(160deg, #e8f0dc, #f0f5e8);">
+              <div data-id="151" class="h-[180px] flex items-center justify-center" style="background: linear-gradient(160deg, #F7E0E8, #F4D3DB);">
                 <svg data-id="152" width="80" height="120" viewBox="0 0 80 120">
-                  <rect data-id="153" x="15" y="15" width="50" height="85" rx="4" fill="rgba(255,255,255,0.8)" stroke="rgba(166,174,138,0.5)" stroke-width="1.5"/>
+                  <rect data-id="153" x="15" y="15" width="50" height="85" rx="4" fill="rgba(255,255,255,0.8)" stroke="rgba(201,141,134,0.5)" stroke-width="1.5"/>
                   <rect data-id="154" x="19" y="55" width="42" height="41" rx="2" fill="url(#sig1)" opacity="0.8"/>
                   <rect data-id="155" x="19" y="35" width="42" height="22" fill="rgba(255,255,255,0.85)"/>
                   <rect data-id="156" x="19" y="19" width="42" height="18" rx="2" fill="rgba(200,215,180,0.6)"/>
-                  <defs data-id="157"><linearGradient data-id="158" id="sig1" x1="0" y1="0" x2="0" y2="1"><stop data-id="159" offset="0%" stop-color="#b5cf8a"/><stop data-id="160" offset="100%" stop-color="#8fa96e"/></linearGradient></defs>
+                  <defs data-id="157"><linearGradient data-id="158" id="sig1" x1="0" y1="0" x2="0" y2="1"><stop data-id="159" offset="0%" stop-color="#E8A4B8"/><stop data-id="160" offset="100%" stop-color="#D97A9A"/></linearGradient></defs>
                 </svg>
               </div>
-              <div data-id="161" class="h-1 bg-sage"></div>
+              <div class="h-1 bg-rose-mid"></div>
               <div data-id="162" class="p-5">
-                <span data-id="163" class="font-poppins uppercase tracking-[2px] text-sage block mb-2" style="font-size:10px;">Signature</span>
-                <h4 data-id="164" class="font-cinzel text-espresso text-lg mb-2">Velusa Signature Latte</h4>
-                <p data-id="165" class="font-lato text-taupe text-sm leading-relaxed mb-4">Ceremonial matcha · house oat milk · honey dust</p>
+                <span data-id="163" class="font-poppins uppercase tracking-[2px] text-rose-dark block mb-2" style="font-size:10px;">Fusion</span>
+                <h4 data-id="164" class="font-cinzel text-espresso text-lg mb-2">Ruby Velvet</h4>
+                <p data-id="165" class="font-lato text-taupe text-sm leading-relaxed mb-4">House-made strawberry compote and cold milk topped with ceremonial matcha, rich cream cheese cold foam, and a mini cheesecake bite</p>
                 <div data-id="166" class="flex items-center justify-between">
-                  <span data-id="167" class="font-cormorant text-rose-mid text-lg">$14</span>
-                  <button data-id="168" class="font-poppins uppercase tracking-[1px] text-rose-dark text-xs hover:underline">Order</button>
+                  <span data-id="167" class="font-cormorant text-rose-mid text-lg">$11.50</span>
+                  <span class="font-poppins uppercase tracking-[1px] text-rose-dark text-xs opacity-70">Menu Item</span>
                 </div>
               </div>
             </div>
 
-            <!-- Card 2: Rose Gold Matcha (shimmer) -->
+            <!-- Card 2: Amber Sol -->
+            <div data-id="211" class="drink-card bg-offwhite border border-blush rounded-lg overflow-hidden shadow-sm reveal">
+              <div data-id="212" class="h-[180px] flex items-center justify-center" style="background: linear-gradient(160deg, #FCE9E2, #FAD9C2);">
+                <svg data-id="213" width="70" height="130" viewBox="0 0 70 130">
+                  <rect data-id="214" x="15" y="10" width="40" height="100" rx="4" fill="rgba(255,255,255,0.7)" stroke="rgba(166,174,138,0.4)" stroke-width="1"/>
+                  <rect data-id="215" x="19" y="55" width="32" height="51" rx="2" fill="url(#mangoGrad)"/>
+                  <rect data-id="216" x="19" y="35" width="32" height="22" fill="rgba(255,255,255,0.85)"/>
+                  <rect data-id="217" x="19" y="14" width="32" height="23" rx="2" fill="rgba(214,233,200,0.7)"/>
+                  <line data-id="219" x1="50" y1="60" x2="50" y2="70" stroke="rgba(255,255,255,0.4)" stroke-width="0.5"/>
+                  <line data-id="220" x1="45" y1="65" x2="55" y2="65" stroke="rgba(255,255,255,0.4)" stroke-width="0.5"/>
+                  <!-- Bubbles -->
+                  <circle data-id="221" cx="25" cy="80" r="1.5" fill="rgba(255,255,255,0.5)"/>
+                  <circle data-id="222" cx="35" cy="70" r="1" fill="rgba(255,255,255,0.4)"/>
+                  <circle data-id="223" cx="30" cy="90" r="1.2" fill="rgba(255,255,255,0.4)"/>
+                  <defs data-id="224"><linearGradient id="mangoGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#FFC978"/>
+    <stop offset="100%" stop-color="#FFB25C"/></linearGradient></defs>
+                </svg>
+              </div>
+              <div class="h-1" style="background-color:#E7B08A;"></div>
+              <div data-id="229" class="p-5">
+                <span class="font-poppins uppercase tracking-[2px] block mb-2" style="font-size:10px; color:#C46A3A;">Specialty</span>
+                <h4 data-id="231" class="font-cinzel text-espresso text-lg mb-2">Amber Sol</h4>
+                <p data-id="232" class="font-lato text-taupe text-sm leading-relaxed mb-4">Lush mango purée paired with a coconut milk blend, crowned with layered ceremonial matcha for a vibrant, tropical finish</p>
+                <div data-id="233" class="flex items-center justify-between">
+                  <span data-id="234" class="font-cormorant text-rose-mid text-lg">$11.50</span>
+                  <span class="font-poppins uppercase tracking-[1px] text-rose-dark text-xs opacity-70">Menu Item</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: Golden Silk -->
+            <div data-id="188" class="drink-card bg-offwhite border border-blush rounded-lg overflow-hidden shadow-sm reveal">
+              <div data-id="189" class="h-[180px] flex items-center justify-center" style="background: linear-gradient(160deg, #e3fff1, #F3EBDC);">
+                <svg data-id="190" width="40" height="100" viewBox="0 0 40 100">
+  <defs data-id="196">
+    <!-- Main glass beverage layers -->
+    <linearGradient data-id="197" id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e3fff" />    <!-- Soft creamy gold layer -->
+      <stop offset="35%" stop-color="#e3fff1" />   <!-- Rich honey-gold body -->
+      <stop offset="70%" stop-color="#F3C97A" />   <!-- Deep amber-gold base -->
+      <stop offset="100%" stop-color="#fffff2" />  <!-- Warm golden foundation -->
+    </linearGradient>
+  </defs>
+  <!-- Glass Outer Outline / Highlights -->
+  <rect x="2" y="2" width="36" height="96" rx="3" fill="#FFFFFF" opacity="0.9" /> 
+  <!-- Beverage Liquid Container -->
+  <rect x="4" y="4" width="32" height="92" rx="2" fill="url(#goldGrad)" />
+  <!-- Foam / Cream Top Layer -->
+  <rect x="4" y="4" width="32" height="18" rx="2" fill="#F8F3E6" opacity="0.9" />
+
+  <!-- Delicate Gold/Amber Accent Bubbles -->
+  <circle cx="12" cy="72" r="1.5" fill="#FFFFFF" opacity="0.5" />
+  <circle cx="26" cy="55" r="1.2" fill="#FFFFFF" opacity="0.6" />
+  <circle cx="18" cy="80" r="1.8" fill="#FFFFFF" opacity="0.4" />
+</svg>
+              </div>
+              <div data-id="203" class="h-1" style="background-color: #7caf91;"></div>
+              <div data-id="204" class="p-5">
+                <span data-id="205" class="font-poppins uppercase tracking-[2px] text-[#7caf91] block mb-2" style="font-size:10px;">Seasonal</span>
+                <h4 data-id="206" class="font-cinzel text-espresso text-lg mb-2">Golden Silk</h4>
+                <p data-id="207" class="font-lato text-taupe text-sm leading-relaxed mb-4">Creamy, banana-infused pudding cream topped with cold milk, whisked ceremonial matcha, and a delicate vanilla wafer crumble</p>
+                <div data-id="208" class="flex items-center justify-between">
+                  <span data-id="209" class="font-cormorant text-rose-mid text-lg">$11.50</span>
+                  <span class="font-poppins uppercase tracking-[1px] text-rose-dark text-xs opacity-70">Menu Item</span>
+                </div>
+              </div>
+            </div>
+            <!-- Card 4: Sapphire Bloom -->
+            <div data-id="236" class="drink-card bg-offwhite border border-blush rounded-lg overflow-hidden shadow-sm reveal">
+              <div data-id="237" class="h-[180px] flex items-center justify-center" style="background: linear-gradient(160deg, #e0ddf5, #d8e8f5);">
+                <svg data-id="238" width="70" height="130" viewBox="0 0 70 130">
+                  <rect data-id="239" x="15" y="10" width="40" height="100" rx="4" fill="rgba(255,255,255,0.5)" stroke="rgba(180,170,210,0.4)" stroke-width="1"/>
+                  <rect data-id="240" x="19" y="14" width="32" height="92" rx="2" fill="url(#bot1)"/>
+                  <rect data-id="241" x="19" y="14" width="32" height="20" rx="2" fill="rgba(255,255,255,0.4)"/>
+                  <circle data-id="242" cx="28" cy="70" r="2" fill="rgba(255,255,255,0.3)"/>
+                  <circle data-id="243" cx="38" cy="85" r="1.5" fill="rgba(255,255,255,0.3)"/>
+                  <defs data-id="244"><linearGradient data-id="245" id="bot1" x1="0" y1="0" x2="0" y2="1"><stop data-id="246" offset="0%" stop-color="#b8a5d8"/><stop data-id="247" offset="50%" stop-color="#8aacd4"/><stop data-id="248" offset="100%" stop-color="#7a9cc8"/></linearGradient></defs>
+                </svg>
+              </div>
+              <div class="h-1" style="background-color:#9BB8FF;"></div>
+              <div data-id="250" class="p-5">
+                <span class="font-poppins uppercase tracking-[2px] block mb-2"
+      style="font-size:10px; color:#A7C7FF;">Botanical</span>
+                <h4 data-id="252" class="font-cinzel text-espresso text-lg mb-2">Sapphire Bloom</h4>
+                <p data-id="253" class="font-lato text-taupe text-sm leading-relaxed mb-4">Artisanal blueberry compote layered with milk, ceremonial matcha, airy cinnamon-vanilla foam, and crushed pie crust</p>
+                <div data-id="254" class="flex items-center justify-between">
+                  <span data-id="255" class="font-cormorant text-rose-mid text-lg">$11.50</span>
+                  <span class="font-poppins uppercase tracking-[1px] text-rose-dark text-xs opacity-70">Menu Item</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5: Rose Quartz (shimmer) -->
             <div data-id="169" class="drink-card bg-offwhite border border-blush rounded-lg overflow-hidden shadow-sm reveal shimmer-card relative">
               <div data-id="170" class="h-[180px] flex items-center justify-center" style="background: linear-gradient(160deg, #f5dfe0, #f0d0ce);">
                 <svg data-id="171" width="80" height="120" viewBox="0 0 80 120">
@@ -660,119 +788,39 @@
               </div>
               <div data-id="180" class="h-1 bg-rose-mid"></div>
               <div data-id="181" class="p-5 relative z-10">
-                <span data-id="182" class="font-poppins uppercase tracking-[2px] text-rose-mid block mb-2" style="font-size:10px;">Specialty</span>
-                <h4 data-id="183" class="font-cinzel text-espresso text-lg mb-2">Rose Gold Matcha</h4>
-                <p data-id="184" class="font-lato text-taupe text-sm leading-relaxed mb-4">Matcha · rose water · pink oat foam · edible gold</p>
+                <span data-id="182" class="font-poppins uppercase tracking-[2px] text-rose-mid block mb-2" style="font-size:10px;">Botanical</span>
+                <h4 data-id="183" class="font-cinzel text-espresso text-lg mb-2">Rose Quartz</h4>
+                <p data-id="184" class="font-lato text-taupe text-sm leading-relaxed mb-4">Sweet lychee-white peach compote layered with milk, ceremonial matcha, delicate elderflower cream foam, and a speared lychee</p>
                 <div data-id="185" class="flex items-center justify-between">
-                  <span data-id="186" class="font-cormorant text-rose-mid text-lg">$16</span>
-                  <button data-id="187" class="font-poppins uppercase tracking-[1px] text-rose-dark text-xs hover:underline">Order</button>
+                  <span data-id="186" class="font-cormorant text-rose-mid text-lg">$11.50</span>
+                  <span class="font-poppins uppercase tracking-[1px] text-rose-dark text-xs opacity-70">Menu Item</span>
                 </div>
               </div>
             </div>
 
-            <!-- Card 3: Forest Hojicha -->
-            <div data-id="188" class="drink-card bg-offwhite border border-blush rounded-lg overflow-hidden shadow-sm reveal">
-              <div data-id="189" class="h-[180px] flex items-center justify-center" style="background: linear-gradient(160deg, #e8ddd4, #ddd0c4);">
-                <svg data-id="190" width="90" height="110" viewBox="0 0 90 110">
-                  <ellipse data-id="191" cx="45" cy="88" rx="30" ry="6" fill="rgba(74,60,55,0.1)"/>
-                  <path data-id="192" d="M20 45 Q20 88 45 88 Q70 88 70 45" fill="url(#hoj1)" stroke="#9A8087" stroke-width="2"/>
-                  <ellipse data-id="193" cx="45" cy="45" rx="25" ry="10" fill="#d4c4b5" stroke="#9A8087" stroke-width="2"/>
-                  <ellipse data-id="194" cx="45" cy="47" rx="20" ry="7" fill="url(#hojLiq)"/>
-                  <path data-id="195" d="M70 55 Q82 52 80 62 Q78 72 70 68" fill="none" stroke="#9A8087" stroke-width="2"/>
-                  <defs data-id="196">
-                    <linearGradient data-id="197" id="hoj1" x1="0" y1="0" x2="0" y2="1"><stop data-id="198" offset="0%" stop-color="#d4c4b5"/><stop data-id="199" offset="100%" stop-color="#b8a595"/></linearGradient>
-                    <radialGradient data-id="200" id="hojLiq" cx="40%" cy="40%"><stop data-id="201" offset="0%" stop-color="#c49a6e"/><stop data-id="202" offset="100%" stop-color="#8b6a45"/></radialGradient>
-                  </defs>
-                </svg>
-              </div>
-              <div data-id="203" class="h-1 bg-taupe"></div>
-              <div data-id="204" class="p-5">
-                <span data-id="205" class="font-poppins uppercase tracking-[2px] text-taupe block mb-2" style="font-size:10px;">Seasonal</span>
-                <h4 data-id="206" class="font-cinzel text-espresso text-lg mb-2">Forest Hojicha</h4>
-                <p data-id="207" class="font-lato text-taupe text-sm leading-relaxed mb-4">Roasted hojicha · chestnut milk · caramel bark</p>
-                <div data-id="208" class="flex items-center justify-between">
-                  <span data-id="209" class="font-cormorant text-rose-mid text-lg">$13</span>
-                  <button data-id="210" class="font-poppins uppercase tracking-[1px] text-rose-dark text-xs hover:underline">Order</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 4: Yuzu Citrus Spritz -->
-            <div data-id="211" class="drink-card bg-offwhite border border-blush rounded-lg overflow-hidden shadow-sm reveal">
-              <div data-id="212" class="h-[180px] flex items-center justify-center" style="background: linear-gradient(160deg, #e8f0dc, #f5f0d8);">
-                <svg data-id="213" width="70" height="130" viewBox="0 0 70 130">
-                  <rect data-id="214" x="15" y="10" width="40" height="100" rx="4" fill="rgba(255,255,255,0.7)" stroke="rgba(166,174,138,0.4)" stroke-width="1"/>
-                  <rect data-id="215" x="19" y="55" width="32" height="51" rx="2" fill="url(#yuzu1)"/>
-                  <rect data-id="216" x="19" y="35" width="32" height="22" fill="rgba(200,215,180,0.4)"/>
-                  <rect data-id="217" x="19" y="14" width="32" height="23" rx="2" fill="rgba(255,255,255,0.6)"/>
-                  <circle data-id="218" cx="50" cy="65" r="8" fill="#e8d44d" opacity="0.6" stroke="#c9a96e" stroke-width="0.5"/>
-                  <line data-id="219" x1="50" y1="60" x2="50" y2="70" stroke="rgba(255,255,255,0.4)" stroke-width="0.5"/>
-                  <line data-id="220" x1="45" y1="65" x2="55" y2="65" stroke="rgba(255,255,255,0.4)" stroke-width="0.5"/>
-                  <!-- Bubbles -->
-                  <circle data-id="221" cx="25" cy="80" r="1.5" fill="rgba(255,255,255,0.5)"/>
-                  <circle data-id="222" cx="35" cy="70" r="1" fill="rgba(255,255,255,0.4)"/>
-                  <circle data-id="223" cx="30" cy="90" r="1.2" fill="rgba(255,255,255,0.4)"/>
-                  <defs data-id="224"><linearGradient data-id="225" id="yuzu1" x1="0" y1="0" x2="0" y2="1"><stop data-id="226" offset="0%" stop-color="#c8d89a"/><stop data-id="227" offset="100%" stop-color="#8fa96e"/></linearGradient></defs>
-                </svg>
-              </div>
-              <div data-id="228" class="h-1 bg-sage"></div>
-              <div data-id="229" class="p-5">
-                <span data-id="230" class="font-poppins uppercase tracking-[2px] text-sage block mb-2" style="font-size:10px;">Cold</span>
-                <h4 data-id="231" class="font-cinzel text-espresso text-lg mb-2">Yuzu Citrus Spritz</h4>
-                <p data-id="232" class="font-lato text-taupe text-sm leading-relaxed mb-4">Cold brew matcha · yuzu syrup · sparkling water · mint</p>
-                <div data-id="233" class="flex items-center justify-between">
-                  <span data-id="234" class="font-cormorant text-rose-mid text-lg">$15</span>
-                  <button data-id="235" class="font-poppins uppercase tracking-[1px] text-rose-dark text-xs hover:underline">Order</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 5: Botanica Mist -->
-            <div data-id="236" class="drink-card bg-offwhite border border-blush rounded-lg overflow-hidden shadow-sm reveal">
-              <div data-id="237" class="h-[180px] flex items-center justify-center" style="background: linear-gradient(160deg, #e0ddf5, #d8e8f5);">
-                <svg data-id="238" width="70" height="130" viewBox="0 0 70 130">
-                  <rect data-id="239" x="15" y="10" width="40" height="100" rx="4" fill="rgba(255,255,255,0.5)" stroke="rgba(180,170,210,0.4)" stroke-width="1"/>
-                  <rect data-id="240" x="19" y="14" width="32" height="92" rx="2" fill="url(#bot1)"/>
-                  <rect data-id="241" x="19" y="14" width="32" height="20" rx="2" fill="rgba(255,255,255,0.4)"/>
-                  <circle data-id="242" cx="28" cy="70" r="2" fill="rgba(255,255,255,0.3)"/>
-                  <circle data-id="243" cx="38" cy="85" r="1.5" fill="rgba(255,255,255,0.3)"/>
-                  <defs data-id="244"><linearGradient data-id="245" id="bot1" x1="0" y1="0" x2="0" y2="1"><stop data-id="246" offset="0%" stop-color="#b8a5d8"/><stop data-id="247" offset="50%" stop-color="#8aacd4"/><stop data-id="248" offset="100%" stop-color="#7a9cc8"/></linearGradient></defs>
-                </svg>
-              </div>
-              <div data-id="249" class="h-1 bg-blush"></div>
-              <div data-id="250" class="p-5">
-                <span data-id="251" class="font-poppins uppercase tracking-[2px] text-blush block mb-2" style="font-size:10px;">Botanical</span>
-                <h4 data-id="252" class="font-cinzel text-espresso text-lg mb-2">Botanica Mist</h4>
-                <p data-id="253" class="font-lato text-taupe text-sm leading-relaxed mb-4">White matcha · lavender · butterfly pea flower gradients</p>
-                <div data-id="254" class="flex items-center justify-between">
-                  <span data-id="255" class="font-cormorant text-rose-mid text-lg">$15</span>
-                  <button data-id="256" class="font-poppins uppercase tracking-[1px] text-rose-dark text-xs hover:underline">Order</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 6: Espresso Fusion -->
+            <!-- Card 6: Dubai Pearl -->
             <div data-id="257" class="drink-card bg-offwhite border border-blush rounded-lg overflow-hidden shadow-sm reveal">
-              <div data-id="258" class="h-[180px] flex items-center justify-center" style="background: linear-gradient(160deg, #e8ddd4, #dde8d8);">
+              <div data-id="258" class="h-[180px] flex items-center justify-center" style="background: linear-gradient(160deg, #FFF7D9, #FFF3C4);">
                 <svg data-id="259" width="80" height="120" viewBox="0 0 80 120">
                   <rect data-id="260" x="18" y="15" width="44" height="80" rx="4" fill="rgba(255,255,255,0.7)" stroke="rgba(138,91,84,0.4)" stroke-width="1.5"/>
                   <rect data-id="261" x="22" y="55" width="36" height="36" rx="2" fill="url(#esp1)"/>
                   <rect data-id="262" x="22" y="35" width="36" height="22" fill="url(#esp2)"/>
                   <rect data-id="263" x="22" y="19" width="36" height="18" rx="2" fill="rgba(255,250,245,0.8)"/>
                   <defs data-id="264">
-                    <linearGradient data-id="265" id="esp1" x1="0" y1="0" x2="0" y2="1"><stop data-id="266" offset="0%" stop-color="#6a4a35"/><stop data-id="267" offset="100%" stop-color="#4A3C37"/></linearGradient>
+                    <linearGradient data-id="265" id="esp1" x1="0" y1="0" x2="0" y2="1"><stop data-id="266" offset="0%" stop-color="#F3C97A"/><stop data-id="267" offset="100%" stop-color="#F3C97A"/></linearGradient>
                     <linearGradient data-id="268" id="esp2" x1="0" y1="0" x2="0" y2="1"><stop data-id="269" offset="0%" stop-color="#8fa96e"/><stop data-id="270" offset="100%" stop-color="#6a7b4e"/></linearGradient>
                   </defs>
                 </svg>
               </div>
-              <div data-id="271" class="h-1 bg-rose-dark"></div>
+              <div class="h-1" style="background-color:#E8D9A8;"></div>
               <div data-id="272" class="p-5">
-                <span data-id="273" class="font-poppins uppercase tracking-[2px] text-rose-dark block mb-2" style="font-size:10px;">Fusion</span>
-                <h4 data-id="274" class="font-cinzel text-espresso text-lg mb-2">Espresso Fusion</h4>
-                <p data-id="275" class="font-lato text-taupe text-sm leading-relaxed mb-4">Double shot espresso · matcha layer · steamed cream</p>
+                <span data-id="273" class="font-poppins uppercase tracking-[2px] block mb-2" 
+      style="font-size:10px; color:#C6A96E;">Specialty</span>
+                <h4 data-id="274" class="font-cinzel text-espresso text-lg mb-2">Dubai Pearl</h4>
+                <p data-id="275" class="font-lato text-taupe text-sm leading-relaxed mb-4">House-blended pistachio milk infused with warm saffron-cardamom syrup, layered with ceremonial matcha, vanilla pearl foam, and edible shimmer dust</p>
                 <div data-id="276" class="flex items-center justify-between">
-                  <span data-id="277" class="font-cormorant text-rose-mid text-lg">$14</span>
-                  <button data-id="278" class="font-poppins uppercase tracking-[1px] text-rose-dark text-xs hover:underline">Order</button>
+                  <span data-id="277" class="font-cormorant text-rose-mid text-lg">$13.50</span>
+                  <span class="font-poppins uppercase tracking-[1px] text-rose-dark text-xs opacity-70">Menu Item</span>
                 </div>
               </div>
             </div>
@@ -1147,15 +1195,69 @@
   </div>
 </div>
         <!-- Hours Strip -->
-        <div data-id="542" class="mt-16 bg-espresso py-8">
-          <div data-id="543" class="max-w-4xl mx-auto px-5 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 text-center">
-            <div data-id="544"><span data-id="545" class="text-2xl block mb-1">🕐</span><p data-id="546" class="font-cinzel text-blush text-sm">Open Daily</p><p data-id="547" class="font-lato text-taupe text-xs">7am – 9pm</p></div>
-            <div data-id="548"><span data-id="549" class="text-2xl block mb-1">🅿️</span><p data-id="550" class="font-cinzel text-blush text-sm">Complimentary Parking</p><p data-id="551" class="font-lato text-taupe text-xs">All Locations</p></div>
-            <div data-id="552"><span data-id="553" class="text-2xl block mb-1">🌿</span><p data-id="554" class="font-cinzel text-blush text-sm">Walk-Ins Welcome</p><p data-id="555" class="font-lato text-taupe text-xs">Always</p></div>
-          </div>
-        </div>
-      </section>
+<!-- Main Outer Section (Ensures full width of content area) -->
+<div class="w-full my-12">
+  
+  <!-- Grid container: spreads 3 items evenly on desktop, stacks on mobile -->
+  <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+
+    <!-- Card 1 -->
+    <div class="flex flex-col items-center justify-between p-6 bg-white/70 rounded-3xl border border-[#F2E8E3] text-center shadow-sm">
+      <div class="w-12 h-12 rounded-full bg-[#F5EBE6] flex items-center justify-center text-[#8C686D] mb-4">
+        <!-- Sun/Sparkle Icon -->
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+        </svg>
+      </div>
+      <h3 class="text-base font-serif tracking-widest uppercase text-[#5E4B4B] mb-2">
+        Mobile Matcha Bar
+      </h3>
+      <p class="text-xs tracking-wider uppercase text-[#9E8A88]">
+        Always in Motion
+      </p>
     </div>
+
+    <!-- Card 2 -->
+    <div class="flex flex-col items-center justify-between p-6 bg-white/70 rounded-3xl border border-[#F2E8E3] text-center shadow-sm">
+      <div class="w-12 h-12 rounded-full bg-[#F5EBE6] flex items-center justify-center text-[#8C686D] mb-4">
+        <!-- Pin Icon -->
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+        </svg>
+      </div>
+      <h3 class="text-base font-serif tracking-widest uppercase text-[#5E4B4B] mb-2">
+        KC Metro Route
+      </h3>
+      <p class="text-xs tracking-wider uppercase text-[#9E8A88]">
+        Community Pop-Ups Weekly
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="flex flex-col items-center justify-between p-6 bg-white/70 rounded-3xl border border-[#F2E8E3] text-center shadow-sm">
+      <div class="w-12 h-12 rounded-full bg-[#F5EBE6] flex items-center justify-center text-[#8C686D] mb-4">
+        <!-- Calendar Icon -->
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 002-2H5a2 2 0 00-2 2v12a2 2 0 002-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+      </div>
+      <h3 class="text-base font-serif tracking-widest uppercase text-[#5E4B4B] mb-2">
+        Follow Our Weekly Map
+      </h3>
+      <p class="text-xs tracking-wider uppercase text-[#9E8A88]">
+        See Where Velusa Appears Next
+      </p>
+    </div>
+</div>
+</section>
+  </div>
+</div>
+
 
     <!-- ==================== PAGE: ABOUT ==================== -->
     <div data-id="556" id="page-about" class="page">
@@ -1417,17 +1519,8 @@ No shortcuts, no noise — just pure, ceremonial grace in motion.</p>
               <a data-id="728" href="#" class="footer-nav-link font-lato text-taupe text-sm hover:text-blush transition-colors" data-page="menu">Menu</a>
               <a data-id="729" href="#" class="footer-nav-link font-lato text-taupe text-sm hover:text-blush transition-colors" data-page="locations">Locations</a>
               <a data-id="730" href="#" class="footer-nav-link font-lato text-taupe text-sm hover:text-blush transition-colors" data-page="about">About Us</a>
-            </div>
-          </div>
-          <!-- Col 3: Experience -->
-          <div data-id="733">
-            <h4 data-id="734" class="font-cinzel text-rose-mid tracking-[3px] mb-4" style="font-size:14px;">Experience</h4>
-            <div data-id="735" class="flex flex-col gap-2">
-              <a data-id="736" href="#" class="font-lato text-taupe text-sm hover:text-blush transition-colors cursor-pointer">Book an Event</a>
               <a data-id="738" href="#" class="font-lato text-taupe text-sm hover:text-blush transition-colors cursor-pointer">Matcha Ceremony</a>
-              <a data-id="739" href="#" class="font-lato text-taupe text-sm hover:text-blush transition-colors cursor-pointer">Gift Cards</a>
-              <a data-id="740" href="#" class="font-lato text-taupe text-sm hover:text-blush transition-colors cursor-pointer">Loyalty Program</a>
-              <a data-id="741" href="#" class="font-lato text-taupe text-sm hover:text-blush transition-colors cursor-pointer">Catering</a>
+              <a data-id="736" href="#" class="font-lato text-taupe text-sm hover:text-blush transition-colors cursor-pointer">Book an Event</a>
             </div>
           </div>
           <!-- Col 4: Visit -->
