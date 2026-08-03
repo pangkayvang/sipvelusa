@@ -487,11 +487,13 @@ section[class*="marquee"] {
   </button>
 
   <!-- Use the Book classes here -->
-  <button id="hero-find-popup-btn"
-    class="font-poppins uppercase tracking-[2px] text-rose-dark border-[1.5px] border-rose-dark px-9 py-4 hover:bg-rose-dark hover:text-cream transition-colors"
-    style="font-size:11px;">
-    Find a Mobile Pop-Up
-  </button>
+  <button id="hero-menu-btn-velusa"
+  onclick="activateTab('locations')"
+  class="font-poppins uppercase tracking-[2px] text-rose-dark border-[1.5px] border-rose-dark px-9 py-4 hover:bg-rose-dark hover:text-cream transition-colors"
+  style="font-size:11px"
+>
+  Find a Mobile Pop-Up
+</button>
 
   <!-- Use the Find classes here -->
   <button data-id="66" id="hero-book-btn-g7h5"
@@ -512,7 +514,10 @@ section[class*="marquee"] {
               <span data-id="72">100% Organic</span>
             </div>
           </div>
-          <!-- Right -->
+<div id="locations" class="tab-content hidden">
+  <!-- locations content -->
+</div>
+<!-- Right -->
 <div data-id="73" class="hero-right-comp w-full md:w-[45%] shrink-0 flex justify-center items-center relative mt-12 md:mt-0">
   <div data-id="74" class="relative flex flex-col items-center">
     
@@ -520,12 +525,12 @@ section[class*="marquee"] {
     <img 
       src="assets/velusa_heroimg.png" 
       alt="Velusa Hero" 
-      class="w-[380px] h-[420px] object-cover object-center rounded-xl shadow-md"
+      class="w-[460px] h-[320px] object-cover object-center rounded-xl shadow-md"
     />
 
     <!-- Audio Player Bar -->
     <div class="mt-4 pt-2 w-full max-w-xs flex flex-col items-center gap-1.5">
-      <p class="font-sans text-lg tracking-[0.2em] uppercase text-rose-mid/80 font-light text-center">Listen to the Velusa Soundscape</p>
+      <p class="font-sans text-sm tracking-[0.2em] uppercase text-rose-mid/80 font-light text-center">Listen to the Velusa Soundscape</p>
       
      <!-- Audio Element (Hidden) -->
 <audio id="velusa-audio" preload="auto">
@@ -563,8 +568,8 @@ section[class*="marquee"] {
 <div data-id="112" id="value-props-bar" class="marquee-strip relative flex items-center justify-center w-full px-4 overflow-hidden" style="height:44px;">
 
 <!-- VALUE PROPS BAR (Responsive & Pulse) -->
-<div data-id="112" id="value-props-bar" class="marquee-strip flex items-center justify-center w-full px-2 sm:px-4 overflow-hidden" style="height:44px;">
-  <div class="pulse-banner flex items-center justify-center space-x-2 sm:space-x-4 md:space-x-5 text-center uppercase tracking-widest text-[10px] sm:text-xs md:text-sm font-medium whitespace-nowrap">
+<div data-id="112" id="value-props-bar" class="marquee-strip flex items-center justify-center w-full px-2 sm:px-4 overflow-hidden" style="height:38px;">
+  <div class="pulse-banner flex items-center justify-center space-x-2 sm:space-x-4 md:space-x-5 text-center uppercase tracking-widest text-[8px] sm:text-xs md:text-sm font-medium whitespace-nowrap">
     <span>Ceremonial Grade Matcha</span>
     <span class="spark font-normal text-[6px]">✦</span>
     <span>Soft Luxury Experience</span>
