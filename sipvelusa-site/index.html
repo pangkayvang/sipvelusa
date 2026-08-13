@@ -410,8 +410,17 @@ section[class*="marquee"] {
         </div>
 
         <!-- Right side -->
-        <div data-id="19" class="flex items-center gap-4">
-          <button data-id="20" id="reserve-nav-btn-x9w1" class="hidden md:block font-poppins uppercase tracking-[2px] text-cream bg-espresso px-5 py-2.5 rounded-md hover:bg-rose-dark transition-colors" style="font-size:11px;">Book Velusa</button>
+<div data-id="19" class="flex items-center gap-4">
+  <button
+  data-id="20"
+  id="reserve-nav-btn-x9w1"
+  data-page="book"
+  type="button"
+  class="hidden md:block font-poppins uppercase tracking-[2px] text-cream bg-espresso px-5 py-2.5 rounded-none hover:bg-rose-dark transition-colors"
+  style="font-size:11px;">
+  Book Velusa
+</button>
+</div>
           <div data-id="21" class="hidden md:block w-px h-6 bg-blush"></div>
           <button data-id="22" id="mobile-menu-btn-z3v7" class="md:hidden p-2">
             <svg class="w-7 h-7 text-[#4A3C37] block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -435,7 +444,7 @@ section[class*="marquee"] {
         <a data-id="33" href="#" class="mobile-nav-link font-cinzel text-espresso text-2xl tracking-wider" data-page="about">About</a>
         <a data-id="34" href="#" class="mobile-nav-link font-cinzel text-espresso text-2xl tracking-wider" data-page="contact">Contact</a>
       </div>
-      <button data-id="35" id="mobile-reserve-btn-r1n4" class="mt-8 font-poppins uppercase tracking-[2px] text-cream bg-espresso px-6 py-3 rounded-full" style="font-size:12px;">Book Velusa</button>
+<button data-id="35" id="mobile-reserve-btn-r1n4" class="mt-8 font-poppins uppercase tracking-[2px] text-cream bg-espresso px-6 py-3 rounded-none" style="font-size:12px;">Book Velusa</button>
     </div>
 
     <!-- Confirmation Overlay -->
@@ -444,7 +453,7 @@ section[class*="marquee"] {
         <div data-id="38" class="w-16 h-16 rounded-full bg-sage mx-auto flex items-center justify-center mb-4"><i data-id="39" data-lucide="check" class="w-8 h-8 text-white"></i></div>
         <h3 data-id="40" class="font-vibes text-rose-mid text-3xl mb-2">Reservation Confirmed</h3>
         <p data-id="41" class="font-cinzel text-espresso text-lg mb-2">Thank you for choosing Velusa</p>
-        <p data-id="42" class="font-lato text-taupe text-sm mb-6">We've sent a confirmation to your email. Our concierge will reach out within 2 hours with your seating details.</p>
+        <p data-id="42" class="font-lato text-taupe text-sm mb-6">Our team has received your submission and will email you directly within 24 hours.</p>
         <button data-id="43" id="close-booking-overlay-a3k8" class="font-poppins uppercase tracking-[2px] text-cream bg-espresso px-8 py-3 rounded-full text-xs hover:bg-rose-dark transition-colors">Close</button>
       </div>
     </div>
@@ -486,24 +495,31 @@ section[class*="marquee"] {
     Discover Your Gem
   </button>
 
-  <!-- Use the Book classes here -->
-  <button id="hero-menu-btn-velusa"
-  onclick="activateTab('locations')"
-  class="font-poppins uppercase tracking-[2px] text-rose-dark border-[1.5px] border-rose-dark px-9 py-4 hover:bg-rose-dark hover:text-cream transition-colors"
-  style="font-size:11px"
+<!-- Hero Action Buttons -->
+
+<!-- Upcoming Pop-Ups → Locations -->
+<a
+  href="#"
+  id="hero-menu-btn-velusa"
+  class="nav-link font-poppins uppercase tracking-[2px] text-rose-dark border-[1.5px] border-rose-dark px-9 py-4 hover:bg-rose-dark hover:text-cream transition-colors"
+  style="font-size:11px; text-decoration:none;"
+  data-page="locations"
 >
   Upcoming Pop-Ups
+</a>
+
+<!-- Book Velusa -->
+<button
+  type="button"
+  data-id="66"
+  id="hero-book-btn-g7h5"
+  class="font-poppins uppercase tracking-[2px] text-rose-dark border-[1.5px] border-rose-dark px-9 py-4 hover:bg-rose-dark hover:text-cream hover:opacity-90 transition-all duration-200"
+  style="font-size:11px;"
+  onclick="activateTab('booking')"
+>
+  Book Velusa
 </button>
 
-  <!-- Use the Find classes here -->
-  <button data-id="66" id="hero-book-btn-g7h5"
-    class="font-poppins uppercase tracking-[2px]
-           text-rose-dark border-[1.5px] border-rose-dark
-           px-9 py-4 hover:bg-rose-dark hover:text-cream
-           transition-colors"
-    style="font-size:11px;">
-    Book Velusa
-  </button>
 </div>
 
             <div data-id="67" class="flex items-center gap-6 font-lato text-taupe" style="font-size:11px;">
@@ -1418,21 +1434,27 @@ section[class*="marquee"] {
           <p data-id="307" class="font-lato text-rose-mid text-sm max-w-[480px] mx-auto mb-10">From intimate celebrations to weddings, corporate gatherings, and curated events, Velusa brings ceremonial matcha and handcrafted Gems directly to your guests. Every detail is thoughtfully designed to create a beautiful moment worth savoring.</p>
 
           <form data-id="308" id="booking-form-e2g7" class="rounded-xl p-6 md:p-10 text-left" style="background: rgba(255,253,252,0.06); border: 1px solid rgba(201,141,134,0.3); max-width: 680px; margin: 0 auto;">
-            <div data-id="309" class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <input data-id="310" type="text" placeholder="Full Name" class="form-input form-input-dark" id="booking-name-u1q3">
-              <input data-id="311" type="email" placeholder="Email Address" class="form-input form-input-dark" id="booking-email-v4w6">
-            </div>
-            <div data-id="312" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-              <select data-id="313" class="form-input text-espresso" id="booking-location-x5y8">
-  <option data-id="314" value="" disabled selected hidden>Location</option>
-  <option data-id="315">Prairie Village, KS</option>
-  <option data-id="316">Kansas City, MO</option>
-  <option data-id="317">Leawood, KS</option>
-  <option data-id="318">Overland Park, KS</option>
-</select>
-<input data-id="319" type="date" class="form-input text-espresso" id="booking-date-z9a1">
-<input data-id="320" type="number" placeholder="# Guests" min="1" max="1000" class="form-input text-espresso" id="booking-party-b3c5">
-            </div>
+  <div data-id="309" class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    
+    <input data-id="310" type="text" placeholder="Full Name" class="form-input text-espresso" id="booking-name-u1q3">
+    
+    <input data-id="311" type="email" placeholder="Email Address" class="form-input text-espresso" id="booking-email-v4w6">
+    
+  </div>
+
+  <div data-id="312" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+    <select data-id="313" class="form-input text-espresso" id="booking-location-x5y8">
+      <option data-id="314" value="" disabled selected hidden>Location</option>
+      <option data-id="315">Prairie Village, KS</option>
+      <option data-id="316">Kansas City, MO</option>
+      <option data-id="317">Leawood, KS</option>
+      <option data-id="318">Overland Park, KS</option>
+    </select>
+
+    <input data-id="319" type="date" class="form-input text-espresso" id="booking-date-z9a1">
+
+    <input data-id="320" type="number" placeholder="# Guests" min="1" max="1000" class="form-input text-espresso" id="booking-party-b3c5">
+  </div>
             <div data-id="321" class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <select data-id="322" class="form-input text-espresso" id="booking-occasion-d6e8">
   <option data-id="323" value="" disabled selected hidden>Occasion</option>
@@ -1442,9 +1464,9 @@ section[class*="marquee"] {
   <option data-id="327" value="private-party">Private Party</option>
   <option data-id="328" value="other">Other Celebration</option>
 </select>
-             <textarea data-id="329" rows="2" placeholder="Special Requests" class="form-input text-espresso resize-none" id="booking-requests-f1g3"></textarea>
+            <textarea data-id="329" rows="2" placeholder="Special Requests" class="form-input text-espresso resize-none" id="booking-requests-f1g3"></textarea>
             </div>
-            <button data-id="330" type="submit" id="booking-submit-h4i6" class="w-full font-cinzel text-offwhite tracking-[3px] py-4 rounded text-base hover:opacity-90 transition-opacity" style="background: linear-gradient(135deg, #C4909E, #9B6B7A);">Submit Inquiry</button>
+            <button data-id="330" type="submit" id="booking-submit-h4i6" class="w-full font-cinzel text-offwhite tracking-[3px] py-4 rounded-none text-base hover:opacity-90 transition-opacity" style="background: linear-gradient(135deg, #C4909E, #9B6B7A);">Submit Inquiry</button>
             <p data-id="331" class="font-lato text-taupe text-xs text-center mt-4">Bookings confirmed within 24 hours · Date changes honored up to 7 days prior</p>
           </form>
         </div>
@@ -2381,7 +2403,7 @@ section[class*="marquee"] {
 
   <style>
 
-    /* --------------------------------
+/* --------------------------------
        MENU INTRO
     -------------------------------- */
 
@@ -2396,7 +2418,7 @@ section[class*="marquee"] {
 
       font-weight: 700;
 
-      color: #a97868;
+      color: #C07A8B; /* Soft Deep Mauve */
 
       margin-bottom: 10px;
     }
@@ -2411,7 +2433,7 @@ section[class*="marquee"] {
 
       font-weight: 500;
 
-      color: #4a3c37;
+      color: #4A353A; /* Dark Plum/Mauve for crisp readability */
     }
 
 
@@ -2426,7 +2448,7 @@ section[class*="marquee"] {
         linear-gradient(
           90deg,
           transparent,
-          #b88a78,
+          #E8C5C8, /* Rose Gold / Blush accent */
           transparent
         );
     }
@@ -2443,7 +2465,7 @@ section[class*="marquee"] {
 
       line-height: 1.8;
 
-      color: #806f69;
+      color: #7D6368; /* Muted Dusty Mauve */
     }
 
 
@@ -2470,11 +2492,11 @@ section[class*="marquee"] {
 
       appearance: none;
 
-      border: 1px solid rgba(174, 126, 108, 0.45);
+      border: 1px solid rgba(216, 163, 175, 0.45); /* Soft Blush Border */
 
-      background: rgba(255,255,255,0.55);
+      background: rgba(255, 255, 255, 0.7);
 
-      color: #765d55;
+      color: #8C5B67; /* Mauve Text */
 
       padding: 9px 17px;
 
@@ -2498,9 +2520,9 @@ section[class*="marquee"] {
 
     .velusa-filter:hover {
 
-      border-color: #b17d6b;
+      border-color: #D8A3AF;
 
-      background: #f5e7e1;
+      background: #FDF0F2; /* Light Blush Pink tint */
 
       transform: translateY(-1px);
 
@@ -2509,22 +2531,21 @@ section[class*="marquee"] {
 
     .velusa-filter.active {
 
-      color: #fffaf7;
+      color: #FFFFFF;
 
-      border-color: #ad7868;
+      border-color: #D48C9A;
 
       background:
         linear-gradient(
           135deg,
-          #a97163,
-          #c99b89
+          #C07A8B, /* Rich Mauve */
+          #E8B4BC  /* Light Blush */
         );
 
       box-shadow:
-        0 5px 16px rgba(145, 95, 80, 0.18);
+        0 5px 16px rgba(192, 122, 139, 0.22); /* Soft Mauve Glow */
 
     }
-
 
     /* --------------------------------
        SECTION HEADING
@@ -2569,9 +2590,8 @@ section[class*="marquee"] {
 
     }
 
-
-    /* --------------------------------
-       DRINK CARD
+/* --------------------------------
+        DRINK CARD
     -------------------------------- */
 
     .velusa-drink-card {
@@ -2585,8 +2605,8 @@ section[class*="marquee"] {
       background:
         linear-gradient(
           145deg,
-          #fffaf7 0%,
-          #f8eee9 100%
+          #FFF9FA 0%,  /* Soft off-white with a hint of rose */
+          #FDF0F2 100% /* Ultra-light blush pink */
         );
 
       border: 1px solid rgba(181, 135, 117, 0.22);
@@ -3573,9 +3593,7 @@ section[class*="marquee"] {
 
       </div>
 
-
-
-      <!-- ================================
+<!-- ================================
            INFO STRIP
       ================================= -->
 
@@ -3798,7 +3816,7 @@ section[class*="marquee"] {
 
       letter-spacing: 3px;
 
-      color: #a97868;
+      color: #B87D8B; /* Soft Rose Gold / Mauve */
 
     }
 
@@ -3819,7 +3837,7 @@ section[class*="marquee"] {
 
       letter-spacing: 1px;
 
-      color: #4a3c37;
+      color: #3E3235; /* Deep Charcoal Plum */
 
     }
 
@@ -3838,7 +3856,7 @@ section[class*="marquee"] {
         linear-gradient(
           90deg,
           transparent,
-          #b88a78,
+          #C8A2AD,
           transparent
         );
 
@@ -3860,7 +3878,7 @@ section[class*="marquee"] {
 
       letter-spacing: .3px;
 
-      color: #9b6b7a;
+      color: #7D8B68; /* Sage Green Accent */
 
     }
 
@@ -3879,7 +3897,7 @@ section[class*="marquee"] {
 
       line-height: 1.8;
 
-      color: #806f69;
+      color: #6C5D61; /* Soft Warm Gray */
 
     }
 
@@ -3939,7 +3957,7 @@ section[class*="marquee"] {
 
       letter-spacing: .5px;
 
-      color: #4a3c37;
+      color: #3E3235;
 
     }
 
@@ -3959,7 +3977,7 @@ section[class*="marquee"] {
 
       line-height: 1.8;
 
-      color: #806f69;
+      color: #6C5D61;
 
     }
 
@@ -3997,23 +4015,18 @@ section[class*="marquee"] {
 
       padding: 28px;
 
-      background:
-        linear-gradient(
-          145deg,
-          #fffdfb 0%,
-          #f9efeb 100%
-        );
+      background: #FFF9FA; /* Delicate Off-White Blush */
 
       border:
         1px solid
-        rgba(169, 120, 104, .20);
+        #EFE0E4; /* Soft Warm Blush Border */
 
       border-radius:
         20px;
 
       box-shadow:
         0 8px 28px
-        rgba(74, 60, 55, .055);
+        rgba(184, 125, 139, .06);
 
       transition:
         transform .3s ease,
@@ -4029,13 +4042,14 @@ section[class*="marquee"] {
         translateY(-4px);
 
       border-color:
-        rgba(169, 120, 104, .38);
+        #C8A2AD;
 
       box-shadow:
         0 15px 35px
-        rgba(74, 60, 55, .10);
+        rgba(184, 125, 139, .12);
 
     }
+
 
 
     /* =================================
@@ -4075,11 +4089,11 @@ section[class*="marquee"] {
       background:
         linear-gradient(
           145deg,
-          #e9d1c9,
-          #c99989
+          #C8A2AD, /* Light Blush Pink */
+          #B87D8B  /* Mauve Rose Gold */
         );
 
-      color: #fffaf7;
+      color: #FFFFFF;
 
       font-family:
         'Cormorant Garamond',
@@ -4093,7 +4107,7 @@ section[class*="marquee"] {
         rgba(255,255,255,.35),
 
         0 4px 12px
-        rgba(100,70,60,.10);
+        rgba(184,125,139,.20);
 
     }
 
@@ -4110,7 +4124,7 @@ section[class*="marquee"] {
 
       letter-spacing: 2px;
 
-      color: #a97868;
+      color: #B87D8B;
 
     }
 
@@ -4135,7 +4149,7 @@ section[class*="marquee"] {
 
       font-weight: 500;
 
-      color: #4a3c37;
+      color: #3E3235;
 
     }
 
@@ -4153,7 +4167,7 @@ section[class*="marquee"] {
 
       line-height: 1.8;
 
-      color: #806f69;
+      color: #6C5D61;
 
     }
 
@@ -4187,13 +4201,13 @@ section[class*="marquee"] {
 
       border:
         1px solid
-        rgba(169,120,104,.18);
+        #E1E8DC;
 
       border-radius:
         999px;
 
       background:
-        rgba(255,255,255,.65);
+        #F3F6F1; /* Gentle Matcha Cream Background */
 
       font-family:
         'Lato',
@@ -4203,7 +4217,7 @@ section[class*="marquee"] {
 
       letter-spacing: .5px;
 
-      color: #806f69;
+      color: #5C6B4B; /* Deep Sage Text */
 
     }
 
@@ -4263,10 +4277,10 @@ section[class*="marquee"] {
 
       border:
         1px solid
-        #a97868;
+        #7D8B68; /* Sage Green Border */
 
       color:
-        #9b6b7a;
+        #7D8B68;
 
     }
 
@@ -4274,10 +4288,10 @@ section[class*="marquee"] {
     .velusa-outline-button:hover {
 
       background:
-        #a97868;
+        #7D8B68;
 
       color:
-        #fffaf7;
+        #FFFFFF;
 
     }
 
@@ -4286,21 +4300,21 @@ section[class*="marquee"] {
 
       border:
         1px solid
-        #a97868;
+        transparent;
 
       background:
         linear-gradient(
           135deg,
-          #a97868,
-          #c69a87
-        );
+          #A06876,
+          #86505D
+        ); /* Deep Rose Gold / Soft Plum */
 
       color:
-        #fffaf7;
+        #FFFFFF;
 
       box-shadow:
         0 4px 12px
-        rgba(150,100,85,.15);
+        rgba(160,104,118,.25);
 
     }
 
@@ -4312,7 +4326,7 @@ section[class*="marquee"] {
 
       box-shadow:
         0 7px 16px
-        rgba(150,100,85,.22);
+        rgba(160,104,118,.35);
 
     }
 
@@ -4356,7 +4370,7 @@ section[class*="marquee"] {
       font-weight: 500;
 
       color:
-        #4a3c37;
+        #3E3235;
 
     }
 
@@ -4378,7 +4392,7 @@ section[class*="marquee"] {
       line-height: 1.8;
 
       color:
-        #806f69;
+        #6C5D61;
 
     }
 
@@ -4413,18 +4427,18 @@ section[class*="marquee"] {
       text-align: center;
 
       background:
-        rgba(255,255,255,.58);
+        #FFF9FA; /* Off-White Blush */
 
       border:
         1px solid
-        #eadbd5;
+        #EFE0E4;
 
       border-radius:
         18px;
 
       box-shadow:
         0 5px 18px
-        rgba(74,60,55,.035);
+        rgba(184,125,139,.05);
 
     }
 
@@ -4448,10 +4462,14 @@ section[class*="marquee"] {
       border-radius: 50%;
 
       background:
-        #f5e9e4;
+        #FAF0F2; /* Soft Blush Circle */
+
+      border:
+        1px solid
+        #EFE0E4;
 
       color:
-        #a97868;
+        #B87D8B; /* Soft Rose Gold / Mauve SVG Icon */
 
     }
 
@@ -4481,7 +4499,7 @@ section[class*="marquee"] {
       font-weight: 500;
 
       color:
-        #5e4b4b;
+        #3E3235;
 
     }
 
@@ -4502,7 +4520,7 @@ section[class*="marquee"] {
         uppercase;
 
       color:
-        #9e8a88;
+        #B87D8B;
 
     }
 
@@ -4526,22 +4544,18 @@ section[class*="marquee"] {
       text-align: center;
 
       background:
-        linear-gradient(
-          145deg,
-          #f8ebe6,
-          #f1ddd7
-        );
+        #FAF5F6; /* Soft Rose Cream Container */
 
       border:
         1px solid
-        rgba(169,120,104,.22);
+        #EFE0E4;
 
       border-radius:
         24px;
 
       box-shadow:
         0 8px 28px
-        rgba(74,60,55,.055);
+        rgba(184,125,139,.08);
 
     }
 
@@ -4559,7 +4573,7 @@ section[class*="marquee"] {
       font-weight: 500;
 
       color:
-        #4a3c37;
+        #3E3235;
 
     }
 
@@ -4581,7 +4595,7 @@ section[class*="marquee"] {
       line-height: 1.75;
 
       color:
-        #806f69;
+        #6C5D61;
 
     }
 
@@ -4603,12 +4617,12 @@ section[class*="marquee"] {
       background:
         linear-gradient(
           135deg,
-          #a97868,
-          #c69a87
+          #9AA885, /* Light Sage Green */
+          #7D8B68  /* Matcha Green */
         );
 
       color:
-        #fffaf7;
+        #FFFFFF;
 
       font-family:
         'Lato',
@@ -4629,7 +4643,7 @@ section[class*="marquee"] {
 
       box-shadow:
         0 5px 15px
-        rgba(150,100,85,.18);
+        rgba(125,139,104,.25);
 
       transition:
         transform .25s ease,
@@ -4645,7 +4659,7 @@ section[class*="marquee"] {
 
       box-shadow:
         0 8px 20px
-        rgba(150,100,85,.24);
+        rgba(125,139,104,.35);
 
     }
 
@@ -4901,9 +4915,9 @@ No rush. No excess. Just intentional craft, genuine hospitality, and a little lu
         </div>
 
 <!-- ==================== PAGE: CONTACT ==================== -->
-<section id="page-contact" class="scroll-mt-40 md:scroll-mt-64">
+<section id="page-contact" class="page">
 
-  <!-- Header -->
+  <!-- ==================== CONTACT HEADER ==================== -->
   <div data-id="659"
        class="flex flex-col items-center justify-center text-center py-20 md:py-24"
        style="background: linear-gradient(135deg, #C4909E, #9B6B7A); min-height: 240px;">
@@ -4921,117 +4935,635 @@ No rush. No excess. Just intentional craft, genuine hospitality, and a little lu
 
   </div>
 
-</section>
-      <!-- Contact Body -->
-      <section data-id="662" class="py-16 md:py-20 bg-cream">
-        <div data-id="663" class="max-w-6xl mx-auto px-5 md:px-8 flex flex-col md:flex-row gap-12">
-          <!-- Left: Info Cards -->
-          <div data-id="664" class="flex-1">
-            <div data-id="665" class="space-y-4 reveal">
-              <div data-id="666" class="bg-offwhite border-l-4 border-rose-mid p-6 rounded-lg shadow-sm">
-                <p data-id="667" class="font-cinzel text-espresso mb-1">✉ Say Hello</p>
-                <p data-id="668" class="font-lato text-taupe text-sm">hello@sipvelusa.com</p>
-              </div>
-              <div data-id="670" class="bg-offwhite border-l-4 border-rose-mid p-6 rounded-lg shadow-sm">
-                <p data-id="671" class="font-cinzel text-espresso mb-1">☎ Call or Text</p>
-                <p data-id="672" class="font-lato text-taupe text-sm">(913) 555-0192 — daily 9am–6pm</p>
-              </div>
-              <div data-id="673" class="bg-offwhite border-l-4 border-rose-mid p-6 rounded-lg shadow-sm">
-                <p data-id="674" class="font-cinzel text-espresso mb-1">◇ Serving the KC Metro</p>
-                <p data-id="675" class="font-lato text-taupe text-sm">Mobile Matcha & Beverage Bar<br>Olathe, KS</p>
-              </div>
-              <div data-id="676" class="bg-offwhite border-l-4 border-rose-mid p-6 rounded-lg shadow-sm">
-                <p data-id="677" class="font-cinzel text-espresso mb-1">◎ Follow the Velusa Journey</p>
-                <p class="font-lato text-taupe text-xs mb-3">@sipvelusa</p>
-<div class="flex items-center gap-4 text-rose-dark">
-  <!-- Instagram -->
-  <a href="https://instagram.com/sipvelusa" target="_blank" aria-label="Instagram" class="hover:text-espresso transition-colors duration-200">
-    <svg class="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-  </a>
 
-  <!-- TikTok -->
-  <a href="https://tiktok.com/@sipvelusa" target="_blank" aria-label="TikTok" class="hover:text-espresso transition-colors duration-200">
-    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 1 1-5.2-1.74 2.89 2.89 0 0 1 2.31-2.83V7.65a6.34 6.34 0 1 0 6.34 6.34V9.4a8.16 8.16 0 0 0 4.77 1.52V7.47a4.85 4.85 0 0 1-1-.78z"/></svg>
-  </a>
+  <!-- ==================== CONTACT BODY ==================== -->
+  <section data-id="662" class="py-16 md:py-20 bg-cream">
 
-  <!-- YouTube -->
-  <a href="https://youtube.com/@sipvelusa" target="_blank" aria-label="YouTube" class="hover:text-espresso transition-colors duration-200">
-    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-  </a>
+    <div data-id="663"
+         class="max-w-6xl mx-auto px-5 md:px-8 flex flex-col md:flex-row gap-12">
 
-  <!-- Facebook -->
-  <a href="https://facebook.com/sipvelusa" target="_blank" aria-label="Facebook" class="hover:text-espresso transition-colors duration-200">
-    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-  </a>
 
-  <!-- Pinterest -->
-  <a href="https://pinterest.com/sipvelusa" target="_blank" aria-label="Pinterest" class="hover:text-espresso transition-colors duration-200">
-    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
-  </a>
-</div>
-              </div>
-            </div>
-            <!-- Botanical illustration -->
-            <div data-id="679" class="mt-8 flex justify-center reveal">
-  <img src="assets/flower.png" alt="Flower illustration" class="h-24 w-auto object-contain -rotate-125">
-</div>
+      <!-- ==================== LEFT: CONTACT INFO ==================== -->
+      <div data-id="664" class="flex-1">
+
+        <div data-id="665" class="space-y-4 reveal">
+
+          <!-- Say Hello -->
+          <div data-id="666"
+               class="bg-offwhite border-l-4 border-rose-mid p-6 rounded-lg shadow-sm">
+
+            <p data-id="667" class="font-cinzel text-espresso mb-1">
+              ✉ Say Hello
+            </p>
+
+            <p data-id="668" class="font-lato text-taupe text-sm">
+              hello@sipvelusa.com
+            </p>
+
           </div>
 
-          <!-- Right: Contact Form -->
-          <div data-id="687" class="flex-1 reveal">
-            <div data-id="688" class="bg-offwhite rounded-xl p-8 md:p-10 shadow-lg">
-              <div id="form-container">
-  <form data-id="689" id="contact-form-k519" action="https://formspree.io/f/xnjeldzz" method="POST">
-    <div data-id="690" class="space-y-6 mb-8">
-      <input data-id="691" type="text" name="name" placeholder="Full Name" class="form-input form-input-light" id="contact-name-m2n4" required>
-      
-      <input data-id="692" type="email" name="_replyto" placeholder="Email Address" class="form-input form-input-light" id="contact-email-p6q8" required>
-      
-      <select data-id="693" name="subject" class="form-input form-input-light" id="contact-subject-r3s5">
-        <option data-id="694" value="" disabled selected>Subject</option>
-        <option data-id="695" value="General Inquiry">General Inquiry</option>
-        <option data-id="696" value="Media & Press">Media & Press</option>
-        <option data-id="697" value="Private Event">Private Event</option>
-        <option data-id="698" value="Wholesale">Wholesale</option>
-        <option data-id="699" value="Feedback">Feedback</option>
-      </select>
-      
-      <textarea data-id="700" name="message" rows="4" placeholder="Your Message" class="form-input form-input-light resize-none" id="contact-message-t7u9" required></textarea>
-    </div>
-    
-    <button data-id="701" type="submit" id="contact-submit-v1w3" class="w-full font-cinzel text-offwhite tracking-[3px] py-4 rounded bg-rose-dark text-base hover:bg-espresso transition-colors" style="font-size:15px;">Send Message</button>
-    
-    <p data-id="702" class="font-lato text-taupe text-xs text-center mt-3">We respond within 24 hours</p>
-  </form>
-</div>
 
-<!-- Custom Styled Success Message (Hidden by default) -->
-<div id="form-success" class="hidden text-center py-10 space-y-3">
-  <p class="font-cinzel text-2xl text-espresso">Thank You!</p>
-  <p class="font-lato text-taupe text-sm">Your message has been received. We will respond within 24 hours.</p>
-</div>
-</form>
-            </div>
+          <!-- Call or Text -->
+          <div data-id="670"
+               class="bg-offwhite border-l-4 border-rose-mid p-6 rounded-lg shadow-sm">
+
+            <p data-id="671" class="font-cinzel text-espresso mb-1">
+              ☎ Call or Text
+            </p>
+
+            <p data-id="672" class="font-lato text-taupe text-sm">
+              (913) 555-0192 — daily 9am–6pm
+            </p>
+
           </div>
-        </div>
-      </section>
-    </div>
 
-    </main>
 
-    <!-- ==================== FOOTER ==================== -->
-    <footer data-id="710" id="site-footer-d5e7" class="bg-espresso">
-      <div data-id="711" class="max-w-7xl mx-auto px-5 md:px-8 py-14 md:py-16">
-        <div data-id="712" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-8">
-          <!-- Col 1: Brand -->
-          <div data-id="713">
-            <div data-id="714" class="flex items-center gap-2 mb-3">
-              <div class="flex items-center justify-center">
-    <img src="assets/velusa-logo.png" alt="Velusa Logo" class="h-16 w-auto object-contain" />
-</div>
-              <span data-id="718" class="font-cinzel text-blush tracking-[3px]" style="font-size:20px;">VELUSA</span>
-            </div>
+          <!-- Serving KC -->
+          <div data-id="673"
+               class="bg-offwhite border-l-4 border-rose-mid p-6 rounded-lg shadow-sm">
+
+            <p data-id="674" class="font-cinzel text-espresso mb-1">
+              ✦ Serving the KC Metro
+            </p>
+
+            <p data-id="675" class="font-lato text-taupe text-sm">
+              Mobile Matcha & Beverage Bar<br>
+              Olathe, KS
+            </p>
+
+          </div>
+
+
+          <!-- Social Media -->
+          <div data-id="676"
+               class="bg-offwhite border-l-4 border-rose-mid p-6 rounded-lg shadow-sm">
+
+            <p data-id="677" class="font-cinzel text-espresso mb-1">
+              ◎ Follow the Velusa Journey
+            </p>
+
+            <p class="font-lato text-taupe text-xs mb-3">
+              @sipvelusa
+            </p>
+
             <div class="flex items-center gap-4 text-rose-dark">
+
+              <!-- Instagram -->
+              <a href="https://instagram.com/sipvelusa"
+                 target="_blank"
+                 aria-label="Instagram"
+                 class="hover:text-espresso transition-colors duration-200">
+
+                <svg class="w-5 h-5 fill-none stroke-current stroke-2"
+                     viewBox="0 0 24 24">
+
+                  <rect x="2" y="2"
+                        width="20"
+                        height="20"
+                        rx="5"
+                        ry="5"></rect>
+
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+
+                  <line x1="17.5"
+                        y1="6.5"
+                        x2="17.51"
+                        y2="6.5"></line>
+
+                </svg>
+              </a>
+
+
+              <!-- TikTok -->
+              <a href="https://tiktok.com/@sipvelusa"
+                 target="_blank"
+                 aria-label="TikTok"
+                 class="hover:text-espresso transition-colors duration-200">
+
+                <svg class="w-5 h-5 fill-current"
+                     viewBox="0 0 24 24">
+
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 1 1-5.2-1.74 2.89 2.89 0 0 1 2.31-2.83V7.65a6.34 6.34 0 1 0 6.34 6.34V9.4a8.16 8.16 0 0 0 4.77 1.52V7.47a4.85 4.85 0 0 1-1-.78z"/>
+
+                </svg>
+              </a>
+
+
+              <!-- YouTube -->
+              <a href="https://youtube.com/@sipvelusa"
+                 target="_blank"
+                 aria-label="YouTube"
+                 class="hover:text-espresso transition-colors duration-200">
+
+                <svg class="w-5 h-5 fill-current"
+                     viewBox="0 0 24 24">
+
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+
+                </svg>
+              </a>
+
+
+              <!-- Facebook -->
+              <a href="https://facebook.com/sipvelusa"
+                 target="_blank"
+                 aria-label="Facebook"
+                 class="hover:text-espresso transition-colors duration-200">
+
+                <svg class="w-5 h-5 fill-current"
+                     viewBox="0 0 24 24">
+
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+
+                </svg>
+              </a>
+
+
+              <!-- Pinterest -->
+              <a href="https://pinterest.com/sipvelusa"
+                 target="_blank"
+                 aria-label="Pinterest"
+                 class="hover:text-espresso transition-colors duration-200">
+
+                <svg class="w-5 h-5 fill-current"
+                     viewBox="0 0 24 24">
+
+                  <path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
+
+                </svg>
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- Botanical Illustration -->
+        <div data-id="679"
+             class="mt-8 flex justify-center reveal">
+
+          <img src="assets/flower.png"
+               alt="Flower illustration"
+               class="h-24 w-auto object-contain -rotate-125">
+
+        </div>
+
+      </div>
+
+
+      <!-- ==================== RIGHT: CONTACT FORM ==================== -->
+      <div data-id="687" class="flex-1 reveal">
+
+        <div data-id="688"
+             class="bg-offwhite rounded-xl p-8 md:p-10 shadow-lg">
+
+          <div id="form-container">
+
+            <form data-id="689"
+                  id="contact-form-k519"
+                  action="https://formspree.io/f/xnjeldzz"
+                  method="POST">
+
+              <div data-id="690" class="space-y-6 mb-8">
+
+                <input data-id="691"
+                       type="text"
+                       name="name"
+                       placeholder="Full Name"
+                       class="form-input form-input-light"
+                       id="contact-name-m2n4"
+                       style="color: #3E3235 !important; background-color: transparent !important;"
+                       required>
+
+                <input data-id="692"
+                       type="email"
+                       name="_replyto"
+                       placeholder="Email Address"
+                       class="form-input form-input-light"
+                       id="contact-email-p6q8"
+                       style="color: #3E3235 !important; background-color: transparent !important;"
+                       required>
+
+                <select data-id="693"
+                        name="subject"
+                        class="form-input form-input-light"
+                        id="contact-subject-r3s5"
+                        style="color: #3E3235 !important; background-color: transparent !important;">
+
+                  <option data-id="694" value="" disabled selected>
+                    Subject
+                  </option>
+
+                  <option data-id="695" value="General Inquiry">
+                    General Inquiry
+                  </option>
+
+                  <option data-id="696" value="Media & Press">
+                    Media & Press
+                  </option>
+
+                  <option data-id="697" value="Private Event">
+                    Private Event
+                  </option>
+
+                  <option data-id="698" value="Wholesale">
+                    Wholesale
+                  </option>
+
+                  <option data-id="699" value="Feedback">
+                    Feedback
+                  </option>
+
+                </select>
+
+                <textarea data-id="700"
+                          name="message"
+                          rows="4"
+                          placeholder="Your Message"
+                          class="form-input form-input-light resize-none"
+                          id="contact-message-t7u9"
+                          style="color: #3E3235 !important; background-color: transparent !important;"
+                          required></textarea>
+
+              </div>
+
+
+              <button data-id="701"
+                      type="submit"
+                      id="contact-submit-v1w3"
+                      class="w-full font-cinzel text-cream tracking-[3px] py-4 rounded-none text-base hover:opacity-80 transition-opacity"
+                      style="font-size:15px; background-color: #B87D8B; color: #FFF9FA;">
+
+                Send Message
+
+              </button>
+
+
+              <p data-id="702"
+                 class="font-lato text-taupe text-xs text-center mt-3">
+
+                We respond within 24 hours
+
+              </p>
+
+            </form>
+
+
+            <!-- Custom Styled Success Message -->
+            <div id="form-success"
+                 class="hidden text-center py-10 space-y-3">
+
+              <p class="font-cinzel text-2xl text-espresso">
+                Thank You!
+              </p>
+
+              <p class="font-lato text-taupe text-sm">
+                Your message has been received. We will respond within 24 hours.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</section>
+<!-- ==================== END PAGE: CONTACT ==================== -->
+
+
+</main>
+
+<!-- ==================== PAGE: PRIVACY POLICY ==================== -->
+<div data-id="800" id="page-privacy" class="page">
+
+  <section class="bg-offwhite py-20 md:py-28">
+    <div class="max-w-4xl mx-auto px-5 md:px-8">
+
+      <div class="text-center mb-14">
+        <p class="font-poppins uppercase tracking-[3px] text-rose-mid text-xs mb-4">
+          Velusa
+        </p>
+
+        <h1 class="font-cinzel text-espresso tracking-[3px] text-3xl md:text-4xl">
+          Privacy Policy
+        </h1>
+
+        <p class="font-vibes text-rose-mid text-lg mt-4">
+          Your privacy matters to us.
+        </p>
+      </div>
+
+      <div class="font-lato text-taupe leading-8 space-y-8">
+
+        <div>
+          <h2 class="font-cinzel text-espresso tracking-[2px] text-lg mb-3">
+            Our Commitment
+          </h2>
+          <p>
+            Velusa Luxury Matcha Bar respects your privacy and is committed
+            to handling your personal information thoughtfully and responsibly.
+            This Privacy Policy explains how information may be collected,
+            used, and protected when you visit our website or interact with Velusa.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-cinzel text-espresso tracking-[2px] text-lg mb-3">
+            Information We May Collect
+          </h2>
+          <p>
+            Depending on how you interact with our website, we may collect
+            information such as your name, email address, event or booking
+            details, and information you voluntarily provide through forms
+            or other communications.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-cinzel text-espresso tracking-[2px] text-lg mb-3">
+            How We Use Your Information
+          </h2>
+          <p>
+            Information you provide may be used to respond to inquiries,
+            communicate about bookings or events, provide requested services,
+            improve our website, and communicate with you about Velusa when
+            appropriate.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-cinzel text-espresso tracking-[2px] text-lg mb-3">
+            Information Sharing
+          </h2>
+          <p>
+            Velusa does not sell your personal information. Information may
+            be shared with service providers when reasonably necessary to
+            operate our website, process requests, or provide services.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-cinzel text-espresso tracking-[2px] text-lg mb-3">
+            Your Choices
+          </h2>
+          <p>
+            You may contact Velusa with questions about the personal
+            information you have provided or to request that we update
+            or delete information where applicable.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-cinzel text-espresso tracking-[2px] text-lg mb-3">
+            Contact Velusa
+          </h2>
+          <p>
+            For privacy-related questions, please contact us at
+            <a href="mailto:hello@sipvelusa.com"
+               class="text-rose-mid hover:text-espresso transition-colors">
+              hello@sipvelusa.com
+            </a>.
+          </p>
+        </div>
+
+        <p class="text-xs text-taupe pt-6 border-t border-blush">
+          Last updated: August 2026
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+<!-- ==================== PAGE: TERMS OF SERVICE ==================== -->
+<div data-id="810" id="page-terms" class="page">
+
+  <section class="bg-offwhite py-20 md:py-28">
+    <div class="max-w-4xl mx-auto px-5 md:px-8">
+
+      <div class="text-center mb-14">
+        <p class="font-poppins uppercase tracking-[3px] text-rose-mid text-xs mb-4">
+          Velusa
+        </p>
+
+        <h1 class="font-cinzel text-espresso tracking-[3px] text-3xl md:text-4xl">
+          Terms of Service
+        </h1>
+
+        <p class="font-vibes text-rose-mid text-lg mt-4">
+          A few details before you sip, savor, and book.
+        </p>
+      </div>
+
+      <div class="font-lato text-taupe leading-8 space-y-8">
+
+        <div>
+          <h2 class="font-cinzel text-espresso tracking-[2px] text-lg mb-3">
+            Welcome to Velusa
+          </h2>
+          <p>
+            By using the Velusa website, you agree to use the site
+            responsibly and in accordance with these Terms of Service.
+            If you do not agree with these terms, please discontinue use
+            of the website.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-cinzel text-espresso tracking-[2px] text-lg mb-3">
+            Bookings & Events
+          </h2>
+          <p>
+            Submitting a booking inquiry does not necessarily guarantee
+            availability or confirm an event. Velusa will communicate
+            directly regarding availability, event details, and any
+            applicable arrangements.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-cinzel text-espresso tracking-[2px] text-lg mb-3">
+            Pop-Up Locations
+          </h2>
+          <p>
+            Pop-up locations, dates, times, menus, and availability may
+            change. Please check Velusa's website or social channels for
+            the most current event information.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-cinzel text-espresso tracking-[2px] text-lg mb-3">
+            Website Content
+          </h2>
+          <p>
+            Velusa's name, logo, photographs, written content, graphics,
+            product names, and other original brand materials are the
+            property of Velusa unless otherwise indicated and may not be
+            reproduced or used without permission.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-cinzel text-espresso tracking-[2px] text-lg mb-3">
+            Changes to These Terms
+          </h2>
+          <p>
+            Velusa may update these Terms of Service from time to time.
+            Updated terms will be posted on this website with the
+            corresponding effective date.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-cinzel text-espresso tracking-[2px] text-lg mb-3">
+            Contact
+          </h2>
+          <p>
+            Questions about these terms may be directed to
+            <a href="mailto:hello@sipvelusa.com"
+               class="text-rose-mid hover:text-espresso transition-colors">
+              hello@sipvelusa.com
+            </a>.
+          </p>
+        </div>
+
+        <p class="text-xs text-taupe pt-6 border-t border-blush">
+          Last updated: August 2026
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+<!-- ==================== PAGE: ACCESSIBILITY ==================== -->
+<div data-id="820" id="page-accessibility" class="page">
+
+  <section class="bg-offwhite py-20 md:py-28">
+    <div class="max-w-4xl mx-auto px-5 md:px-8">
+
+      <div class="text-center mb-14">
+        <p class="font-poppins uppercase tracking-[3px] text-rose-mid text-xs mb-4">
+          Velusa
+        </p>
+
+        <h1 class="font-cinzel text-espresso tracking-[3px] text-3xl md:text-4xl">
+          Accessibility
+        </h1>
+
+        <p class="font-vibes text-rose-mid text-lg mt-4">
+          Luxury should feel welcoming to everyone.
+        </p>
+      </div>
+
+      <div class="font-lato text-taupe leading-8 space-y-8">
+
+        <div>
+          <h2 class="font-cinzel text-espresso tracking-[2px] text-lg mb-3">
+            Our Commitment
+          </h2>
+          <p>
+            Velusa is committed to creating a website that is welcoming,
+            inclusive, and accessible to as many people as possible.
+            We strive to provide a positive experience for visitors
+            regardless of ability or the technology they use to access
+            our website.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-cinzel text-espresso tracking-[2px] text-lg mb-3">
+            Accessibility Features
+          </h2>
+          <p>
+            We work to support accessible navigation, readable content,
+            meaningful image descriptions, keyboard-friendly interactions,
+            and clear visual presentation throughout our website.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-cinzel text-espresso tracking-[2px] text-lg mb-3">
+            Ongoing Improvements
+          </h2>
+          <p>
+            Accessibility is an ongoing process. As Velusa grows, we will
+            continue reviewing and improving our website experience.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-cinzel text-espresso tracking-[2px] text-lg mb-3">
+            Need Assistance?
+          </h2>
+          <p>
+            If you experience difficulty accessing any part of our website,
+            please let us know. We welcome your feedback and will make
+            reasonable efforts to improve your experience.
+          </p>
+
+          <p class="mt-4">
+            <a href="mailto:hello@sipvelusa.com"
+               class="text-rose-mid hover:text-espresso transition-colors">
+              hello@sipvelusa.com
+            </a>
+          </p>
+        </div>
+
+        <p class="text-xs text-taupe pt-6 border-t border-blush">
+          Last updated: August 2026
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+</div>
+<!-- ==================== FOOTER ==================== -->
+<footer data-id="710" id="site-footer-d5e7" class="bg-espresso">
+  <div data-id="711" class="max-w-7xl mx-auto px-5 md:px-8 py-14 md:py-16">
+    <div data-id="712" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-8">
+
+      <!-- Col 1: Brand -->
+      <div data-id="713">
+
+        <div data-id="714" class="flex items-center gap-2 mb-3">
+
+          <!-- Clickable Velusa Logo + Name -->
+          <a href="#"
+   data-page="home"
+   aria-label="Velusa Home"
+   class="footer-nav-link flex items-center gap-2 hover:opacity-90 transition-opacity duration-200">
+
+            <div class="flex items-center justify-center">
+              <img src="assets/velusa-logo.png"
+                   alt="Velusa Logo"
+                   class="h-16 w-auto object-contain" />
+            </div>
+
+            <span data-id="718"
+                  class="font-cinzel text-blush tracking-[3px]"
+                  style="font-size:20px;">
+              VELUSA
+            </span>
+
+          </a>
+
+        </div>
+
+        <div class="flex items-center gap-4 text-rose-dark">
   <!-- Instagram -->
   <a href="https://instagram.com/sipvelusa" target="_blank" aria-label="Instagram" class="hover:text-espresso transition-colors duration-200">
     <svg class="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
@@ -5054,7 +5586,7 @@ No rush. No excess. Just intentional craft, genuine hospitality, and a little lu
 
   <!-- Pinterest -->
   <a href="https://pinterest.com/sipvelusa" target="_blank" aria-label="Pinterest" class="hover:text-espresso transition-colors duration-200">
-    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
+    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg></a>
             </div>
           </div>
           <!-- Col 2: Explore -->
@@ -5073,10 +5605,10 @@ No rush. No excess. Just intentional craft, genuine hospitality, and a little lu
           <div data-id="742">
             <h4 data-id="743" class="font-cinzel text-rose-mid tracking-[3px] mb-4" style="font-size:14px;">Find Us At Local Farmers Markets</h4>
             <div data-id="744" class="flex flex-col gap-2 font-lato text-taupe text-sm">
-              <p data-id="745">📍 Prairie Village, KS</p>
-              <p data-id="746">📍 Kansas City, MO</p>
-              <p data-id="747">📍 Leawood, KS</p>
-              <p data-id="748">📍 Overland Park, KS</p>
+              <p data-id="745">✦ Prairie Village, KS</p>
+              <p data-id="746">✦ Kansas City, MO</p>
+              <p data-id="747">✦ Leawood, KS</p>
+              <p data-id="748">✦ Overland Park, KS</p>
               <p data-id="749" class="mt-2 text-xs">Seasonal Market Hours • Saturday & Sunday</p>
             </div>
           </div>
@@ -5087,11 +5619,36 @@ No rush. No excess. Just intentional craft, genuine hospitality, and a little lu
           <div data-id="751" class="flex flex-wrap items-center gap-3 font-lato text-taupe text-xs">
             <span data-id="752">© 2026 Velusa Luxury Matcha Bar. All rights reserved.</span>
             <span data-id="753" class="hidden md:inline">|</span>
-            <a data-id="754" href="#" class="hover:text-blush transition-colors">Privacy Policy</a>
-            <span data-id="755">|</span>
-            <a data-id="756" href="#" class="hover:text-blush transition-colors">Terms of Service</a>
-            <span data-id="757">|</span>
-            <a data-id="758" href="#" class="hover:text-blush transition-colors">Accessibility</a>
+            <a
+  data-id="754"
+  href="#"
+  class="footer-nav-link font-lato text-taupe text-xs hover:text-blush transition-colors"
+  data-page="privacy"
+>
+  Privacy Policy
+</a>
+
+<span data-id="755">|</span>
+
+<a
+  data-id="756"
+  href="#"
+  class="footer-nav-link font-lato text-taupe text-xs hover:text-blush transition-colors"
+  data-page="terms"
+>
+  Terms of Service
+</a>
+
+<span data-id="757">|</span>
+
+<a
+  data-id="758"
+  href="#"
+  class="footer-nav-link font-lato text-taupe text-xs hover:text-blush transition-colors"
+  data-page="accessibility"
+>
+  Accessibility
+</a>
           </div>
           <p data-id="759" class="font-lato text-sage text-xs">Crafted with 🍵 in Kansas City</p>
         </div>
@@ -5104,7 +5661,8 @@ No rush. No excess. Just intentional craft, genuine hospitality, and a little lu
         lucide.createIcons();
       }
       // ===== PAGE NAVIGATION =====
-      const pages = ['home', 'menu', 'locations', 'about', 'contact'];
+      const pages = ['home', 'menu', 'locations', 'about', 'contact',
+  'privacy', 'terms', 'accessibility'];
       const navLinks = document.querySelectorAll('.nav-link[data-page]');
       const mobileNavLinks = document.querySelectorAll('.mobile-nav-link[data-page]');
       const footerNavLinks = document.querySelectorAll('.footer-nav-link[data-page]');
@@ -5171,20 +5729,38 @@ No rush. No excess. Just intentional craft, genuine hospitality, and a little lu
         document.getElementById('mobile-menu-p8k3').classList.add('hidden');
       });
 
-      // ===== RESERVE NAV BUTTON =====
-      function handleReserve() {
-        const homePage = document.getElementById('page-home');
-        if (homePage.classList.contains('active')) {
-          document.getElementById('booking-section-d8f1').scrollIntoView({ behavior: 'smooth' });
-        } else {
-          switchPage('contact');
-        }
-      }
-      document.getElementById('reserve-nav-btn-x9w1').addEventListener('click', handleReserve);
-      document.getElementById('mobile-reserve-btn-r1n4').addEventListener('click', function() {
-        document.getElementById('mobile-menu-p8k3').classList.add('hidden');
-        handleReserve();
-      });
+// ===== BOOK VELUSA NAV BUTTON =====
+function handleReserve() {
+  const homePage = document.getElementById('page-home');
+  const bookingSection = document.getElementById('booking-section-d8f1');
+
+  // If we're already on the Home page, go directly to the booking section
+  if (homePage && homePage.classList.contains('active')) {
+    bookingSection.scrollIntoView({ behavior: 'smooth' });
+    return;
+  }
+
+  // If we're on another page, switch to Home first
+  switchPage('home');
+
+  // Wait for the Home page to become visible, then scroll to booking
+  setTimeout(function() {
+    const bookingSection = document.getElementById('booking-section-d8f1');
+
+    if (bookingSection) {
+      bookingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, 550);
+}
+
+// Desktop Book Velusa button
+document.getElementById('reserve-nav-btn-x9w1').addEventListener('click', handleReserve);
+
+// Mobile Book Velusa button
+document.getElementById('mobile-reserve-btn-r1n4').addEventListener('click', function() {
+  document.getElementById('mobile-menu-p8k3').classList.add('hidden');
+  handleReserve();
+});
 
       // Hero buttons
       document.getElementById('hero-menu-btn-f4d2').addEventListener('click', function() {
