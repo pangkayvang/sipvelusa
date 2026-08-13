@@ -114,9 +114,26 @@
 
       select.form-input { appearance: none; cursor: pointer; }
 
-      /* Overlay */
-      .overlay { position: fixed; inset: 0; background: rgba(74,60,55,0.6); backdrop-filter: blur(8px); z-index: 100; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.4s ease; }
-      .overlay.show { opacity: 1; pointer-events: all; }
+     /* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(74,60,55,0.6);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.overlay.show {
+  display: flex;
+  opacity: 1;
+  pointer-events: all;
+}
 
       /* Dotted separator for menu items */
       .menu-item-row { border-bottom: 1px dotted var(--blush); }
@@ -5211,18 +5228,25 @@ No rush. No excess. Just intentional craft, genuine hospitality, and a little lu
 
 
             <!-- Custom Styled Success Message -->
-            <div id="form-success"
-                 class="hidden text-center py-10 space-y-3">
+<div id="form-success"
+     class="hidden text-center py-10">
 
-              <p class="font-cinzel text-2xl text-espresso">
-                Thank You!
-              </p>
+  <p class="font-cinzel text-2xl text-espresso mb-3">
+    Thank You!
+  </p>
 
-              <p class="font-lato text-taupe text-sm">
-                Your message has been received. We will respond within 24 hours.
-              </p>
+  <p class="font-lato text-taupe text-sm leading-relaxed mb-6">
+    Your message has been received. We will respond within 24 hours.
+  </p>
 
-            </div>
+  <button
+    type="button"
+    id="send-another-message"
+    class="font-poppins uppercase tracking-[2px] text-cream bg-espresso px-7 py-3 rounded-full text-xs hover:bg-rose-dark transition-colors">
+    Send Another Message
+  </button>
+
+</div>
 
           </div>
 
@@ -5779,14 +5803,80 @@ document.getElementById('mobile-reserve-btn-r1n4').addEventListener('click', fun
         document.getElementById('booking-overlay-w5t3').classList.remove('show');
       });
 
-      // ===== CONTACT FORM =====
-      document.getElementById('contact-form-k5l9')?.addEventListener('submit', function(e) {
-        e.preventDefault();
-        document.getElementById('contact-overlay-m7j2')?.classList.add('show');
-      });
-      document.getElementById('close-contact-overlay-b9p1').addEventListener('click', function() {
-        document.getElementById('contact-overlay-m7j2').classList.remove('show');
-      });
+// ===== CONTACT FORM =====
+const contactForm = document.getElementById('contact-form-k519');
+const formSuccess = document.getElementById('form-success');
+
+contactForm?.addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const submitButton = document.getElementById('contact-submit-v1w3');
+
+  if (submitButton) {
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending...';
+  }
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+
+      // Hide form
+      contactForm.classList.add('hidden');
+
+      // Show success message
+      formSuccess?.classList.remove('hidden');
+
+      // Clear form
+      contactForm.reset();
+
+    } else {
+      throw new Error('Form submission failed');
+    }
+
+  } catch (error) {
+
+    console.error('Contact form error:', error);
+
+    if (submitButton) {
+      submitButton.disabled = false;
+      submitButton.textContent = 'Send Message';
+    }
+
+    alert('Something went wrong. Please try again.');
+  }
+});
+
+// ===== SEND ANOTHER MESSAGE =====
+const sendAnotherMessage = document.getElementById('send-another-message');
+
+sendAnotherMessage?.addEventListener('click', function() {
+
+  // Hide the thank-you message
+  formSuccess?.classList.add('hidden');
+
+  // Show the form again
+  contactForm?.classList.remove('hidden');
+
+  // Clear all fields
+  contactForm?.reset();
+
+  // Restore Send Message button
+  const submitButton = document.getElementById('contact-submit-v1w3');
+
+  if (submitButton) {
+    submitButton.disabled = false;
+    submitButton.textContent = 'Send Message';
+  }
+
+});
 
       // ===== CATEGORY PILLS =====
       document.querySelectorAll('.cat-pill').forEach(pill => {
