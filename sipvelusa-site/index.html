@@ -3537,663 +3537,794 @@ section[class*="marquee"] {
 
 
 
-    /* =================================
-       LOCATION CARD
-    ================================= */
+/* =================================
+   VELUSA LOCATIONS
+   Luxury Blush • Cream • Rose Gold
+================================= */
 
-    .velusa-location-card {
 
-      position: relative;
+/* =================================
+   LOCATION CARD
+================================= */
 
-      padding: 28px;
+.velusa-location-card {
 
-      background: #FFF9FA; /* Delicate Off-White Blush */
+  position: relative;
 
-      border:
-        1px solid
-        #EFE0E4; /* Soft Warm Blush Border */
+  padding: 28px;
 
-      border-radius:
-        20px;
+  background: #FFF9FA;
 
-      box-shadow:
-        0 8px 28px
-        rgba(184, 125, 139, .06);
+  border:
+    1px solid
+    #EAD9DE;
 
-      transition:
-        transform .3s ease,
-        box-shadow .3s ease,
-        border-color .3s ease;
+  border-radius:
+    20px;
 
-    }
+  box-shadow:
+    0 8px 28px
+    rgba(184, 125, 139, .07);
 
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease;
 
-    .velusa-location-card:hover {
+}
 
-      transform:
-        translateY(-4px);
 
-      border-color:
-        #C8A2AD;
+.velusa-location-card:hover {
 
-      box-shadow:
-        0 15px 35px
-        rgba(184, 125, 139, .12);
+  transform:
+    translateY(-4px);
 
-    }
+  border-color:
+    #C8A2AD;
 
+  box-shadow:
+    0 15px 35px
+    rgba(184, 125, 139, .14);
 
+}
 
-    /* =================================
-       CARD TOP
-    ================================= */
 
-    .velusa-location-card-top {
 
-      display: flex;
+/* =================================
+   CARD TOP
+================================= */
 
-      align-items: center;
+.velusa-location-card-top {
 
-      gap: 12px;
+  display: flex;
 
-      margin-bottom: 14px;
+  align-items: center;
 
-    }
+  gap: 12px;
 
+  margin-bottom: 14px;
 
-    .velusa-location-icon {
+}
 
-      flex:
-        0 0 44px;
 
-      width: 44px;
+/* =================================
+   LOCATION ICON
+================================= */
 
-      height: 44px;
+.velusa-location-icon {
 
-      display: flex;
+  flex:
+    0 0 44px;
 
-      align-items: center;
+  width: 44px;
 
-      justify-content: center;
+  height: 44px;
 
-      border-radius: 50%;
+  display: flex;
 
-      background:
-        linear-gradient(
-          145deg,
-          #C8A2AD, /* Light Blush Pink */
-          #B87D8B  /* Mauve Rose Gold */
-        );
+  align-items: center;
 
-      color: #FFFFFF;
+  justify-content: center;
 
-      font-family:
-        'Cormorant Garamond',
-        serif;
+  border-radius: 50%;
 
-      font-size: 22px;
+  background:
+    linear-gradient(
+      145deg,
+      #E7B5C0,
+      #B87D8B
+    );
 
-      box-shadow:
-        inset
-        0 0 10px
-        rgba(255,255,255,.35),
+  color:
+    #FFFFFF;
 
-        0 4px 12px
-        rgba(184,125,139,.20);
+  font-family:
+    'Cormorant Garamond',
+    serif;
 
-    }
+  font-size:
+    22px;
 
+  box-shadow:
 
-    .velusa-location-label {
+    inset
+    0 0 10px
+    rgba(255,255,255,.40),
 
-      font-family:
-        'Lato',
-        sans-serif;
+    0 4px 12px
+    rgba(184,125,139,.20);
 
-      font-size: 8px;
+}
 
-      font-weight: 700;
 
-      letter-spacing: 2px;
+.velusa-location-label {
 
-      color: #B87D8B;
+  font-family:
+    'Lato',
+    sans-serif;
 
-    }
+  font-size:
+    8px;
 
+  font-weight:
+    700;
 
+  letter-spacing:
+    2px;
 
-    /* =================================
-       CARD TEXT
-    ================================= */
+  color:
+    #9C6876;
 
-    .velusa-location-card h3 {
+}
 
-      margin:
-        0 0 9px;
 
-      font-family:
-        'Cinzel',
-        serif;
 
-      font-size: 19px;
+/* =================================
+   CARD TEXT
+================================= */
 
-      line-height: 1.3;
+.velusa-location-card h3 {
 
-      font-weight: 500;
+  margin:
+    0 0 9px;
 
-      color: #3E3235;
+  font-family:
+    'Cinzel',
+    serif;
 
-    }
+  font-size:
+    19px;
 
+  line-height:
+    1.3;
 
-    .velusa-location-card > p {
+  font-weight:
+    500;
 
-      margin:
-        0 0 17px;
+  color:
+    #3E3235;
 
-      font-family:
-        'Lato',
-        sans-serif;
+}
 
-      font-size: 11px;
 
-      line-height: 1.8;
+.velusa-location-card > p {
 
-      color: #6C5D61;
+  margin:
+    0 0 17px;
 
-    }
+  font-family:
+    'Lato',
+    sans-serif;
 
+  font-size:
+    11px;
 
+  line-height:
+    1.8;
 
-    /* =================================
-       TAGS
-    ================================= */
+  color:
+    #6C5D61;
 
-    .velusa-location-tags {
+}
 
-      display: flex;
 
-      flex-wrap: wrap;
 
-      gap: 7px;
+/* =================================
+   LOCATION TAGS
+================================= */
 
-      margin-bottom: 20px;
+.velusa-location-tags {
 
-    }
+  display: flex;
 
+  flex-wrap: wrap;
 
-    .velusa-location-tags span {
+  gap: 7px;
 
-      display: inline-flex;
+  margin-bottom: 20px;
 
-      align-items: center;
+}
 
-      padding:
-        6px 10px;
 
-      border:
-        1px solid
-        #E1E8DC;
+.velusa-location-tags span {
 
-      border-radius:
-        999px;
+  display: inline-flex;
 
-      background:
-        #f4e5ea; /* Gentle Matcha Cream Background */
+  align-items: center;
 
-      font-family:
-        'Lato',
-        sans-serif;
+  padding:
+    6px 10px;
 
-      font-size: 8px;
+  border:
+    1px solid
+    #EAD9DE;
 
-      letter-spacing: .5px;
+  border-radius:
+    999px;
 
-      color: #2f332a; /* Deep Sage Text */
+  background:
+    #F8E8EC;
 
-    }
+  font-family:
+    'Lato',
+    sans-serif;
 
+  font-size:
+    8px;
 
+  letter-spacing:
+    .5px;
 
-    /* =================================
-       BUTTONS
-    ================================= */
+  color:
+    #6C5D61;
 
-    .velusa-location-actions {
+}
 
-      display: flex;
 
-      gap: 9px;
 
-    }
+/* =================================
+   BUTTONS
+================================= */
 
+.velusa-location-actions {
 
-    .velusa-outline-button,
-    .velusa-solid-button {
+  display: flex;
 
-      flex: 1;
+  gap: 9px;
 
-      min-height: 38px;
+}
 
-      padding:
-        8px 12px;
 
-      border-radius:
-        999px;
+.velusa-outline-button,
+.velusa-solid-button {
 
-      font-family:
-        'Lato',
-        sans-serif;
+  flex:
+    1;
 
-      font-size: 8px;
+  min-height:
+    38px;
 
-      font-weight: 700;
+  padding:
+    8px 12px;
 
-      letter-spacing: 1.1px;
+  border-radius:
+    999px;
 
-      text-transform:
-        uppercase;
+  font-family:
+    'Lato',
+    sans-serif;
 
-      cursor: pointer;
+  font-size:
+    8px;
 
-      transition:
-        all .25s ease;
+  font-weight:
+    700;
 
-    }
+  letter-spacing:
+    1.1px;
 
+  text-transform:
+    uppercase;
 
-    .velusa-outline-button {
+  cursor:
+    pointer;
 
-      background:
-        transparent;
+  transition:
+    all .25s ease;
 
-      border:
-        1px solid
-          #f1b1c1; /* Sage Green Border */
+}
 
-      color:
-          #f1b1c1; /* Sage Green Border */
 
-    }
 
+/* =================================
+   OUTLINE BUTTON
+================================= */
 
-    .velusa-outline-button:hover {
+.velusa-outline-button {
 
-      background:
-        #f3c5d0;
+  background:
+    transparent;
 
-      color:
-        #FFFFFF;
+  border:
+    1px solid
+    #B87D8B;
 
-    }
+  color:
+    #9C6876;
 
+}
 
-    .velusa-solid-button {
 
-      border:
-        1px solid
-        transparent;
+.velusa-outline-button:hover {
 
-      background:
-        linear-gradient(
-          135deg,
-          #ebb5c1,
-          #A06876
-        ); /* Deep Rose Gold / Soft Plum */
+  background:
+    #B87D8B;
 
-      color:
-        #FFFFFF;
+  border-color:
+    #B87D8B;
 
-      box-shadow:
-        0 4px 12px
-        rgba(251, 194, 207, 0.25);
+  color:
+    #FFFFFF;
 
-    }
+}
 
 
-    .velusa-solid-button:hover {
 
-      transform:
-        translateY(-1px);
+/* =================================
+   SOLID BUTTON
+================================= */
 
-      box-shadow:
-        0 7px 16px
-        rgba(160,104,118,.35);
+.velusa-solid-button {
 
-    }
+  border:
+    1px solid
+    transparent;
 
+  background:
+    linear-gradient(
+      135deg,
+      #E7B5C0,
+      #B87D8B
+    );
 
+  color:
+    #FFFFFF;
 
-    /* =================================
-       VELUSA IN MOTION
-    ================================= */
+  box-shadow:
+    0 4px 12px
+    rgba(184,125,139,.20);
 
-    .velusa-motion-intro {
+}
 
-      max-width: 600px;
 
-      margin:
-        70px auto
-        35px;
+.velusa-solid-button:hover {
 
-      text-align: center;
+  transform:
+    translateY(-1px);
 
-    }
+  box-shadow:
+    0 7px 16px
+    rgba(156,104,118,.30);
 
+}
 
-    .velusa-motion-intro
-    .velusa-menu-eyebrow {
 
-      margin-bottom: 8px;
 
-    }
+/* =================================
+   VELUSA IN MOTION
+================================= */
 
+.velusa-motion-intro {
 
-    .velusa-motion-intro h2 {
+  max-width:
+    600px;
 
-      margin: 0;
+  margin:
+    70px auto
+    35px;
 
-      font-family:
-        'Cinzel',
-        serif;
+  text-align:
+    center;
 
-      font-size: 22px;
+}
 
-      font-weight: 500;
 
-      color:
-        #3E3235;
+.velusa-motion-intro
+.velusa-menu-eyebrow {
 
-    }
+  margin-bottom:
+    8px;
 
+}
 
-    .velusa-motion-intro p {
 
-      max-width: 500px;
+.velusa-motion-intro h2 {
 
-      margin:
-        9px auto
-        0;
+  margin:
+    0;
 
-      font-family:
-        'Lato',
-        sans-serif;
+  font-family:
+    'Cinzel',
+    serif;
 
-      font-size: 11px;
+  font-size:
+    22px;
 
-      line-height: 1.8;
+  font-weight:
+    500;
 
-      color:
-        #6C5D61;
+  color:
+    #3E3235;
 
-    }
+}
 
 
+.velusa-motion-intro p {
 
-    /* =================================
-       INFO CARDS
-    ================================= */
+  max-width:
+    500px;
 
-    .velusa-info-grid {
+  margin:
+    9px auto
+    0;
 
-      display: grid;
+  font-family:
+    'Lato',
+    sans-serif;
 
-      grid-template-columns:
-        repeat(3, minmax(0, 1fr));
+  font-size:
+    11px;
 
-      gap: 18px;
+  line-height:
+    1.8;
 
-      max-width: 980px;
+  color:
+    #6C5D61;
 
-      margin:
-        0 auto;
+}
 
-    }
 
 
-    .velusa-info-card {
+/* =================================
+   INFO CARDS
+================================= */
 
-      padding:
-        25px 18px;
+.velusa-info-grid {
 
-      text-align: center;
+  display:
+    grid;
 
-      background:
-        #FFF9FA; /* Off-White Blush */
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
 
-      border:
-        1px solid
-        #EFE0E4;
+  gap:
+    18px;
 
-      border-radius:
-        18px;
+  max-width:
+    980px;
 
-      box-shadow:
-        0 5px 18px
-        rgba(184,125,139,.05);
+  margin:
+    0 auto;
 
-    }
+}
 
 
-    .velusa-info-icon {
+.velusa-info-card {
 
-      width: 46px;
+  padding:
+    25px 18px;
 
-      height: 46px;
+  text-align:
+    center;
 
-      margin:
-        0 auto
-        13px;
+  background:
+    #FFF9FA;
 
-      display: flex;
+  border:
+    1px solid
+    #EAD9DE;
 
-      align-items: center;
+  border-radius:
+    18px;
 
-      justify-content: center;
+  box-shadow:
+    0 5px 18px
+    rgba(184,125,139,.06);
 
-      border-radius: 50%;
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease;
 
-      background:
-        #FAF0F2; /* Soft Blush Circle */
+}
 
-      border:
-        1px solid
-        #EFE0E4;
 
-      color:
-        #B87D8B; /* Soft Rose Gold / Mauve SVG Icon */
+.velusa-info-card:hover {
 
-    }
+  transform:
+    translateY(-3px);
 
+  border-color:
+    #D6B6BF;
 
-    .velusa-info-icon svg {
+  box-shadow:
+    0 10px 24px
+    rgba(184,125,139,.10);
 
-      width: 21px;
+}
 
-      height: 21px;
 
-    }
 
+/* =================================
+   INFO ICON
+================================= */
 
-    .velusa-info-card h3 {
+.velusa-info-icon {
 
-      margin:
-        0 0 6px;
+  width:
+    46px;
 
-      font-family:
-        'Cinzel',
-        serif;
+  height:
+    46px;
 
-      font-size: 13px;
+  margin:
+    0 auto
+    13px;
 
-      line-height: 1.4;
+  display:
+    flex;
 
-      font-weight: 500;
+  align-items:
+    center;
 
-      color:
-        #3E3235;
+  justify-content:
+    center;
 
-    }
+  border-radius:
+    50%;
 
+  background:
+    #F8E8EC;
 
-    .velusa-info-card p {
+  border:
+    1px solid
+    #EAD9DE;
 
-      margin: 0;
+  color:
+    #B87D8B;
 
-      font-family:
-        'Lato',
-        sans-serif;
+}
 
-      font-size: 8px;
 
-      letter-spacing: 1.4px;
+.velusa-info-icon svg {
 
-      text-transform:
-        uppercase;
+  width:
+    21px;
 
-      color:
-        #B87D8B;
+  height:
+    21px;
 
-    }
+}
 
 
 
-    /* =================================
-       FINAL CTA
-    ================================= */
+/* =================================
+   INFO CARD TEXT
+================================= */
 
-    .velusa-location-cta {
+.velusa-info-card h3 {
 
-      max-width: 700px;
+  margin:
+    0 0 6px;
 
-      margin:
-        60px auto
-        0;
+  font-family:
+    'Cinzel',
+    serif;
 
-      padding:
-        38px 25px;
+  font-size:
+    13px;
 
-      text-align: center;
+  line-height:
+    1.4;
 
-      background:
-        #FAF5F6; /* Soft Rose Cream Container */
+  font-weight:
+    500;
 
-      border:
-        1px solid
-        #EFE0E4;
+  color:
+    #3E3235;
 
-      border-radius:
-        24px;
+}
 
-      box-shadow:
-        0 8px 28px
-        rgba(184,125,139,.08);
 
-    }
+.velusa-info-card p {
 
+  margin:
+    0;
 
-    .velusa-location-cta h2 {
+  font-family:
+    'Lato',
+    sans-serif;
 
-      margin: 0;
+  font-size:
+    8px;
 
-      font-family:
-        'Cinzel',
-        serif;
+  letter-spacing:
+    1.4px;
 
-      font-size: 21px;
+  text-transform:
+    uppercase;
 
-      font-weight: 500;
+  color:
+    #9C6876;
 
-      color:
-        #3E3235;
+}
 
-    }
 
 
-    .velusa-location-cta p {
+/* =================================
+   FINAL CTA
+================================= */
 
-      max-width: 500px;
+.velusa-location-cta {
 
-      margin:
-        9px auto
-        20px;
+  max-width:
+    700px;
 
-      font-family:
-        'Lato',
-        sans-serif;
+  margin:
+    60px auto
+    0;
 
-      font-size: 11px;
+  padding:
+    38px 25px;
 
-      line-height: 1.75;
+  text-align:
+    center;
 
-      color:
-        #6C5D61;
+  background:
+    #FAF5F6;
 
-    }
+  border:
+    1px solid
+    #EAD9DE;
 
+  border-radius:
+    24px;
 
-    .velusa-gold-button {
+  box-shadow:
+    0 8px 28px
+    rgba(184,125,139,.08);
 
-      display: inline-flex;
+}
 
-      align-items: center;
 
-      justify-content: center;
 
-      padding:
-        11px 23px;
+/* =================================
+   CTA HEADING
+================================= */
 
-      border-radius:
-        999px;
+.velusa-location-cta h2 {
 
-      background:
-        linear-gradient(
-          135deg,
-          #ebb5c1, /* Light Sage Green */
-          #B87D8B  /* Matcha Green */
-        );
+  margin:
+    0;
 
-      color:
-        #FFFFFF;
+  font-family:
+    'Cinzel',
+    serif;
 
-      font-family:
-        'Lato',
-        sans-serif;
+  font-size:
+    21px;
 
-      font-size: 8px;
+  font-weight:
+    500;
 
-      font-weight: 700;
+  color:
+    #3E3235;
 
-      letter-spacing:
-        1.5px;
+}
 
-      text-transform:
-        uppercase;
 
-      text-decoration:
-        none;
 
-      box-shadow:
-        0 5px 15px
-        rgba(125,139,104,.25);
+/* =================================
+   CTA TEXT
+================================= */
 
-      transition:
-        transform .25s ease,
-        box-shadow .25s ease;
+.velusa-location-cta p {
 
-    }
+  max-width:
+    500px;
 
+  margin:
+    9px auto
+    20px;
 
-    .velusa-gold-button:hover {
+  font-family:
+    'Lato',
+    sans-serif;
 
-      transform:
-        translateY(-2px);
+  font-size:
+    11px;
 
-      box-shadow:
-        0 8px 20px
-        rgba(125,139,104,.35);
+  line-height:
+    1.75;
 
-    }
+  color:
+    #6C5D61;
+
+}
+
+
+
+/* =================================
+   CTA BUTTON
+================================= */
+
+.velusa-gold-button {
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  padding:
+    11px 23px;
+
+  border-radius:
+    999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #E7B5C0,
+      #B87D8B
+    );
+
+  color:
+    #FFFFFF;
+
+  font-family:
+    'Lato',
+    sans-serif;
+
+  font-size:
+    8px;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    1.5px;
+
+  text-transform:
+    uppercase;
+
+  text-decoration:
+    none;
+
+  box-shadow:
+    0 5px 15px
+    rgba(184,125,139,.20);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+
+}
+
+
+.velusa-gold-button:hover {
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 8px 20px
+    rgba(184,125,139,.30);
+
+}    
 
 
 
@@ -4353,42 +4484,19 @@ section[class*="marquee"] {
   <br>
   Just intentional craft, genuine hospitality, and a softer way to savor the moment.
 </p>
-          </div>
-          <!-- CSS Art -->
-          <div data-id="566" class="w-full md:w-[300px] flex items-center justify-center reveal">
-            <div data-id="567" class="relative">
-              <svg data-id="568" width="240" height="360" viewBox="0 0 240 360">
-                <!-- Ceramic bowl -->
-                <ellipse data-id="569" cx="120" cy="280" rx="70" ry="15" fill="rgba(74,60,55,0.08)"/>
-                <path data-id="570" d="M55 240 Q55 290 120 290 Q185 290 185 240" fill="url(#abBowl)" stroke="#9B6B7A" stroke-width="2"/>
-                <ellipse data-id="571" cx="120" cy="240" rx="65" ry="16" fill="#e0d5cc" stroke="#9B6B7A" stroke-width="2"/>
-                <ellipse data-id="572" cx="120" cy="242" rx="58" ry="12" fill="url(#abMatcha)"/>
-                <!-- Stem -->
-                <line data-id="573" x1="120" y1="220" x2="120" y2="80" stroke="#A6AE8A" stroke-width="2"/>
-                <!-- Leaves -->
-                <ellipse data-id="574" cx="100" cy="140" rx="20" ry="8" fill="#A6AE8A" opacity="0.5" transform="rotate(-30 100 140)"/>
-                <ellipse data-id="575" cx="140" cy="120" rx="18" ry="7" fill="#A6AE8A" opacity="0.4" transform="rotate(25 140 120)"/>
-                <ellipse data-id="576" cx="105" cy="100" rx="15" ry="6" fill="#A6AE8A" opacity="0.6" transform="rotate(-15 105 100)"/>
-                <ellipse data-id="577" cx="135" cy="170" rx="16" ry="6" fill="#A6AE8A" opacity="0.45" transform="rotate(20 135 170)"/>
-                <!-- Origami crane -->
-                <polygon data-id="578" points="120,40 108,65 120,55 132,65" fill="#F7E0E8" stroke="#C4909E" stroke-width="1"/>
-                <line data-id="579" x1="120" y1="55" x2="120" y2="45" stroke="#C4909E" stroke-width="0.5"/>
-                <!-- Blossoms -->
-                <circle data-id="580" cx="155" cy="95" r="4" fill="#F7E0E8" opacity="0.7"/>
-                <circle data-id="581" cx="90" cy="165" r="3" fill="#F7E0E8" opacity="0.6"/>
-                <circle data-id="582" cx="150" cy="155" r="3.5" fill="#C4909E" opacity="0.4"/>
-                <!-- Gold dots -->
-                <circle data-id="583" cx="80" cy="130" r="1.5" fill="#C9A96E" opacity="0.5"/>
-                <circle data-id="584" cx="160" cy="145" r="1" fill="#C9A96E" opacity="0.4"/>
-                <circle data-id="585" cx="100" cy="190" r="1.5" fill="#C9A96E" opacity="0.35"/>
-                <defs data-id="586">
-                  <linearGradient data-id="587" id="abBowl" x1="0" y1="0" x2="0" y2="1"><stop data-id="588" offset="0%" stop-color="#e0d5cc"/><stop data-id="589" offset="100%" stop-color="#c4b5a5"/></linearGradient>
-                  <radialGradient data-id="590" id="abMatcha" cx="40%" cy="35%"><stop data-id="591" offset="0%" stop-color="#a8c47a"/><stop data-id="592" offset="100%" stop-color="#6a7b4e"/></radialGradient>
-                </defs>
-              </svg>
-            </div>
-          </div>
-        </div>
+     </div>
+  <!-- Velusa Luxury Sprout -->
+  <div data-id="566" class="w-full md:w-[300px] flex items-center justify-center reveal">
+    <div data-id="567" class="relative">
+      <img 
+        src="assets/flowersprout.png" 
+        alt="Velusa Luxury Sprout" 
+        class="w-[240px] h-auto mx-auto drop-shadow-sm transition-transform duration-300 ease-in-out hover:scale-105" 
+      />
+    </div>
+  </div>
+</div>
+     
       </section>
 
       <!-- Section 2: Values -->
@@ -5627,5 +5735,14 @@ lucide.createIcons();
     }
   });
 </script>
+<div data-id="566" class="w-full md:w-[300px] flex items-center justify-center reveal">
+  <div data-id="567" class="relative">
+    <img 
+      src="assets/flowersprout.png"
+      alt="Velusa Luxury Sprout"
+      class="w-[240px] h-auto mx-auto"
+    />
+  </div>
+</div>
 </body>
 </html>
